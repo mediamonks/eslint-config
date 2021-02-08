@@ -1,0 +1,21 @@
+{
+  "name": "@mediamonks/eslint-config-vue",
+  "version": "1.0.0-alpha.1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mediamonks/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mediamonks/eslint-config.git",
+    "directory": "packages/eslint-config-vue"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@mediamonks/eslint-config-base": "workspace:packages/eslint-config-base",
+    "eslint-plugin-vue": "^7.5.0",
+    "vue-eslint-parser": "^7.4.1"
+  }
+}
