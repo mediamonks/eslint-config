@@ -1,10 +1,4 @@
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: "module",
-    project: "./tsconfig.json",
-  },
-  parser: "@typescript-eslint/parser",
   extends: [
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
@@ -14,6 +8,21 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   plugins: ["import", "unicorn", "babel"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: "module",
+  },
+  settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
+    "import/resolver": {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
+  },
   env: {
     browser: true,
     es6: true,
@@ -23,6 +32,28 @@ module.exports = {
     process: true,
   },
   rules: {
+    // this is the same rule configuration as in `eslint-config-airbnb`
+    // with the `ForOfStatement` selector omitted, as using `for ... of` statements in modern browsers is fine
+    "no-restricted-syntax": [
+      "error",
+      {
+        selector: "ForInStatement",
+        message:
+          "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
+      },
+      {
+        selector: "LabeledStatement",
+
+        message:
+          "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
+      },
+      {
+        selector: "WithStatement",
+
+        message:
+          "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
+      },
+    ],
     "@typescript-eslint/array-type": ["error", { default: "generic", readonly: "generic" }],
     "@typescript-eslint/ban-ts-comment": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
@@ -90,7 +121,7 @@ module.exports = {
       { object: "document", property: "querySelector" },
       { object: "document", property: "querySelectorAll" },
     ],
-    "no-undef": "error",
+    "no-undef": "off", // TypeScript already handles this
     "no-underscore-dangle": "error",
     "no-unused-expressions": "off",
     "react/static-property-placement": "off",
