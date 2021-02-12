@@ -2,7 +2,6 @@ module.exports = {
   extends: ["plugin:vue/vue3-recommended", require.resolve("@mediamonks/eslint-config-base")],
   parserOptions: {
     extraFileExtensions: [".vue"],
-    project: "./tsconfig.json",
   },
   rules: {
     // taken from https://github.com/vuejs/eslint-config-airbnb

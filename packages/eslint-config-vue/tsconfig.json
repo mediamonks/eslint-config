@@ -7,5 +7,5 @@
 
     "strict": true
   },
-  "include": ["./playground.ts", "./playground.vue"]
+  "include": ["index.js", "./playground.ts", "./playground.vue"]
 }
