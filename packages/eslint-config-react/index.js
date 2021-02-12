@@ -9,7 +9,6 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    project: "./tsconfig.json",
   },
   settings: {
     react: {
@@ -17,6 +16,8 @@ module.exports = {
     },
   },
   rules: {
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off", // no longer needed with the new JSX transform
     "react-hooks/exhaustive-deps": "error",
     "react/button-has-type": "error",
     "react/display-name": "off",
