@@ -1,6 +1,7 @@
 {
   "name": "@mediamonks/eslint-config-project",
   "private": true,
+  "version": "1.0.0-alpha.1",
   "scripts": {
     "publish": "yarn workspaces foreach npm publish --access=public"
   },
