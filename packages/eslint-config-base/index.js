@@ -163,6 +163,9 @@ module.exports = {
           param: false,
           params: false,
           args: false,
+          elm: {
+            element: true,
+          }
         },
       },
     ],
