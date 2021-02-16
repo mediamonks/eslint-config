@@ -167,6 +167,10 @@ module.exports = {
             element: true,
           }
         },
+        whitelist: {
+          attr: true
+        },
+        checkProperties: true,
       },
     ],
     "unicorn/throw-new-error": "error",
