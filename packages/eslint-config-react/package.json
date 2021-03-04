@@ -1,6 +1,6 @@
 {
   "name": "@mediamonks/eslint-config-react",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mediamonks/eslint-config/issues"
