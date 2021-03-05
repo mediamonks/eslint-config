@@ -1,31 +1,16 @@
 module.exports = {
-  extends: ["plugin:vue/vue3-recommended", require.resolve("@mediamonks/eslint-config-base")],
+  extends: [
+    "plugin:vue/vue3-recommended",
+    "prettier/vue",
+    require.resolve("@mediamonks/eslint-config-base"),
+  ],
+  // the ts-eslint recommended ruleset sets the parser so we need to set it back
+  parser: "vue-eslint-parser",
   parserOptions: {
     extraFileExtensions: [".vue"],
-  },
-  rules: {
-    // taken from https://github.com/vuejs/eslint-config-airbnb
-    "no-param-reassign": [
-      "error",
-      {
-        props: true,
-        ignorePropertyModificationsFor: [
-          "state", // for vuex state
-          "acc", // for reduce accumulators
-          "e", // for e.returnvalue
-        ],
-      },
-    ],
+    parser: "@typescript-eslint/parser",
   },
   overrides: [
-    {
-      files: ["*.vue"],
-      parser: "vue-eslint-parser",
-      rules: {
-        "prettier/prettier": ["off"],
-        "max-len": ["off"],
-      },
-    },
     {
       files: ["shims-tsx.d.ts"],
       rules: {
