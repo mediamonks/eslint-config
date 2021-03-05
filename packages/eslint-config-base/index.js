@@ -33,6 +33,8 @@ module.exports = {
     process: true,
   },
   rules: {
+    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     // this is the same rule configuration as in `eslint-config-airbnb`
     // with the `ForOfStatement` selector omitted, as using `for ... of` statements in modern browsers is fine
     "no-restricted-syntax": [
