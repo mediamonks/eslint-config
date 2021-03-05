@@ -10,7 +10,7 @@ module.exports = {
   plugins: ["import", "unicorn", "babel"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: "module",
   },
   settings: {
