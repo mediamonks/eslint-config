@@ -12,6 +12,14 @@ module.exports = {
   },
   overrides: [
     {
+      files: ["*.vue"],
+      rules: {
+        // if this is not disabled, then eslint will complain about
+        // every imported component
+        "@typescript-eslint/naming-convention": "off",
+      },
+    },
+    {
       files: ["shims-tsx.d.ts"],
       rules: {
         "@typescript-eslint/no-empty-interface": "off",
