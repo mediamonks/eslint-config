@@ -25,11 +25,11 @@
     "index.js"
   ],
   "dependencies": {
-    "@mediamonks/eslint-config-base": "^1.0.2",
-    "vue-eslint-parser": "^7.4.1"
+    "@mediamonks/eslint-config-base": "^2.0.0-alpha.0",
+    "vue-eslint-parser": "^8.0.1"
   },
   "peerDependencies": {
-    "eslint-plugin-vue": "^7.5.0"
+    "eslint-plugin-vue": "^8.0.3"
   },
   "publishConfig": {
     "access": "public"

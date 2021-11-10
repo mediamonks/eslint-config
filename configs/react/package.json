@@ -26,12 +26,12 @@
     "index.js"
   ],
   "dependencies": {
-    "@mediamonks/eslint-config-base": "^1.0.2"
+    "@mediamonks/eslint-config-base": "^2.0.0-alpha.0"
   },
   "peerDependencies": {
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
   },
   "publishConfig": {
     "access": "public"
