@@ -1,11 +1,9 @@
 {
-  "name": "@mediamonks/eslint-config-project",
+  "name": "@mediamonks/eslint-config-root",
   "private": true,
-  "version": "1.0.0-alpha.2",
-  "scripts": {
-    "publish": "yarn workspaces foreach npm publish"
-  },
   "workspaces": [
-    "packages/*"
+    "configs/base",
+    "configs/react",
+    "configs/vue"
   ]
 }

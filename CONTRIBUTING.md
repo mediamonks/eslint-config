@@ -1,9 +1,23 @@
-# yarn
+# Contributing to `@mediamonks/eslint-config` [WIP]
 
-This project uses [yarn v2](https://yarnpkg.com/getting-started/usage) and its [workspaces](https://yarnpkg.com/features/workspaces) feature.
+Please look through this document for insights in how the project is setup and how to contribute.
 
-This allows us to easily handle multiple packages in the same repository.
+## Folder Structure
 
-The root `package.json` isn't mean to be published and is used to _wrap_ around the `packages` folder, which contains all of the actual publishable packages.
+### Overview
 
-Each non-base package depends on the [eslint-config-base]("./packages/eslint-config-base") package, on publish `yarn` will replace the `workspace:*` versions with proper version numbers.
+```
+configs/
+  base/
+  react/
+  vue/
+```
+
+### Package Descriptions
+
+#### [@mediamonks/eslint-config-base](https://github.com/mediamonks/eslint-config/tree/main/configs/base)
+
+#### [@mediamonks/eslint-config-react](https://github.com/mediamonks/eslint-config/tree/main/configs/react)
+
+#### [@mediamonks/eslint-config-vue](https://github.com/mediamonks/eslint-config/tree/main/configs/vue)
+
