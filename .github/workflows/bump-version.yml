@@ -1,0 +1,47 @@
+# NOTE: taken from https://github.com/MylesBorins/node-osc/blob/main/.github/workflows/bump-version.yml
+
+name: Bump version
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Semver type of new version (major / minor / patch)'
+        required: true
+      config:
+        description: 'The config for which to create a new version (react / vue / base)'
+        required: true
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Check out the content (source branch).  Use a deploy key so that
+    # when we push changes, it will trigger the release workflow
+    # run that runs on: tag. (Using the GitHub token would
+    # not run the workflow to prevent infinite recursion.)
+    - name: Check out source
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+        cache: 'npm'
+
+    - name: Install npm packages
+      run: npm ci
+
+    - name: Setup Git
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+
+    - name: bump version
+      run: |
+        npm version ${{ github.event.inputs.version }} -w configs/${{ github.event.inputs.config }} --no-git-tag-version
+        git tag ${{ github.event.inputs.config }}@$(npm pkg get version --prefix configs/base)
+
+    - name: Push latest version
+      run: git push origin main --follow-tags
