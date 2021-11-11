@@ -42,8 +42,8 @@ jobs:
       run: |
         npm version ${{ github.event.inputs.version }} -w configs/${{ github.event.inputs.config }} --no-git-tag-version --preid ${{ github.event.inputs.prereleaseid }}
         git add .
-        git commit -m "configs-${{ github.event.inputs.config }} v$(npm pkg get version --prefix configs/base | tr -d '"')"
-        git tag @mediamonks/eslint-config-${{ github.event.inputs.config }}@$(npm pkg get version --prefix configs/base | tr -d '"') -m "configs-${{ github.event.inputs.config }} v$(npm pkg get version --prefix configs/base | tr -d '"')"
+        git commit -m "configs-${{ github.event.inputs.config }} v$(npm pkg get version --prefix configs/${{ github.event.inputs.config }} | tr -d '"')"
+        git tag @mediamonks/eslint-config-${{ github.event.inputs.config }}@$(npm pkg get version --prefix configs/${{ github.event.inputs.config }} | tr -d '"') -m "configs-${{ github.event.inputs.config }} v$(npm pkg get version --prefix configs/${{ github.event.inputs.config }} | tr -d '"')"
 
     - name: publish
       run: |
