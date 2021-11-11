@@ -170,7 +170,7 @@ module.exports = {
             element: true,
           },
         },
-        whitelist: {
+        allowList: {
           attr: true
         },
         checkProperties: true,
