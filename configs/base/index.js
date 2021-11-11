@@ -177,5 +177,8 @@ module.exports = {
       },
     ],
     "unicorn/throw-new-error": "error",
+    // prettier handles these
+    "object-curly-newline": "off",
+    "max-len": "off",
   },
 };
