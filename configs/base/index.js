@@ -1,11 +1,9 @@
 module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
     "plugin:import/typescript",
-    "airbnb-base",
-    "plugin:prettier/recommended",
+    "airbnb-base"
   ],
   plugins: ["import", "unicorn", "babel"],
   parser: "@typescript-eslint/parser",

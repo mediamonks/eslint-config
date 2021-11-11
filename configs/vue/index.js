@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
     "plugin:vue/vue3-recommended",
-    "prettier/vue",
     require.resolve("@mediamonks/eslint-config-base"),
   ],
   // the ts-eslint recommended ruleset sets the parser so we need to set it back
