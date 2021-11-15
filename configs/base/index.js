@@ -111,6 +111,12 @@ module.exports = {
     "import/no-unresolved": "error",
     "import/order": ["error", { groups: ["external", "builtin", ["sibling", "parent"]] }],
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: ["**/*.test.ts", "**/*.spec.ts", "**/*.test.tsx", "**/*.spec.tsx"],
+      },
+    ],
     "lines-between-class-members": "off",
     "max-lines": "error",
     "no-console": "error",
