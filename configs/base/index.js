@@ -169,7 +169,8 @@ module.exports = {
           },
         },
         allowList: {
-          attr: true
+          attr: true,
+          argTypes: true
         },
         checkProperties: true,
       },
