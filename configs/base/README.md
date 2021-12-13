@@ -1,4 +1,4 @@
-# @mediamonks/eslint-config-base [![npm version](https://badge.fury.io/js/%40mediamonks%2Feslint-config-vue.svg)](https://badge.fury.io/js/%40mediamonks%2Feslint-config-vue)
+# @mediamonks/eslint-config-base [![npm version](https://badge.fury.io/js/%40mediamonks%2Feslint-config-base.svg)](https://badge.fury.io/js/%40mediamonks%2Feslint-config-base)
 
 This package provides a Base TypeScript eslint configuration as an extensible shared config, based on the [MediaMonks Coding Standards](https://github.com/mediamonks/frontend-coding-standards).
 
