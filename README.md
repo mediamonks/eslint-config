@@ -3,7 +3,7 @@
 The official MediaMonks eslint configurations, based on the [Frontend Coding Standards](https://github.com/mediamonks/frontend-coding-standards).
 
 This mono-repo contains multiple domain specific eslint configurations.
-The [base](https://github.com/mediamonks/eslint-config/tree/main/configs/base) contains general eslint rules made to be used with [TypeScript](https://www.typescriptlang.org/) and [Prettier](https://prettier.io/). Each other configuration, unless otherwise specified, extends from the [base](https://github.com/mediamonks/eslint-config/tree/main/configs/eslint-config-base).
+The [base](https://github.com/mediamonks/eslint-config/tree/main/configs/base) contains general eslint rules made to be used with [TypeScript](https://www.typescriptlang.org/) and [Prettier](https://prettier.io/). Each other configuration, unless otherwise specified, extends from the [base](https://github.com/mediamonks/eslint-config/tree/main/configs/base).
 
 | configuration                                                                               |                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
