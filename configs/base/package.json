@@ -24,19 +24,19 @@
     "index.js"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "^5.3.1",
+    "@typescript-eslint/parser": "^5.8.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.3.0"
   },
   "peerDependencies": {
-    "eslint": ">=8",
-    "prettier": ">=2",
-    "typescript": ">=4",
-    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0",
+    "typescript": "^4.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-html": "^6.2.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-unicorn": "^38.0.1"
   },
