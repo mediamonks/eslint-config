@@ -10,9 +10,10 @@ The configuration has a number of peer dependencies that must be installed.
 npm i --dev @mediamonks/eslint-config-react
 ```
 
-**Note for `yarn` users**: `yarn` does not install peer dependencies by default, this can be supplemented with `install-peerdeps`.
+**Note for `yarn` users**: `yarn` does not install peer dependencies by default, this can be supplemented with `install-peerdeps`. Because this config depends on [@mediamonks/eslint-config-base](../base/README.md), you will first have to install its peer dependencies.
 
 ```bash
+npx install-peerdeps --dev --only-peers @mediamonks/eslint-config-base
 npx install-peerdeps --dev @mediamonks/eslint-config-react
 ```
 
