@@ -3,7 +3,7 @@ module.exports = {
     "airbnb-base",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
   ],
   plugins: ["import", "unicorn", "babel"],
   parser: "@typescript-eslint/parser",
@@ -59,6 +59,7 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
     "@typescript-eslint/explicit-member-accessibility": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "error",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/naming-convention": [
       "error",
@@ -176,7 +177,7 @@ module.exports = {
         },
         allowList: {
           attr: true,
-          argTypes: true
+          argTypes: true,
         },
         checkProperties: true,
       },
