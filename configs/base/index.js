@@ -3,7 +3,7 @@ module.exports = {
     "airbnb-base",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
   ],
   plugins: ["import", "unicorn", "babel"],
   parser: "@typescript-eslint/parser",
@@ -55,7 +55,10 @@ module.exports = {
           "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
       },
     ],
-    "@typescript-eslint/array-type": ["error", { default: "generic", readonly: "generic" }],
+    "@typescript-eslint/array-type": [
+      "error",
+      { default: "generic", readonly: "generic" },
+    ],
     "@typescript-eslint/ban-ts-comment": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
     "@typescript-eslint/explicit-member-accessibility": "error",
@@ -109,12 +112,20 @@ module.exports = {
       },
     ],
     "import/no-unresolved": "error",
-    "import/order": ["error", { groups: ["external", "builtin", ["sibling", "parent"]] }],
+    "import/order": [
+      "error",
+      { groups: ["external", "builtin", ["sibling", "parent"]] },
+    ],
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
-        devDependencies: ["**/*.test.ts", "**/*.spec.ts", "**/*.test.tsx", "**/*.spec.tsx"],
+        devDependencies: [
+          "**/*.test.ts",
+          "**/*.spec.ts",
+          "**/*.test.tsx",
+          "**/*.spec.tsx",
+        ],
       },
     ],
     "lines-between-class-members": "off",
@@ -176,11 +187,35 @@ module.exports = {
         },
         allowList: {
           attr: true,
-          argTypes: true
+          argTypes: true,
         },
         checkProperties: true,
       },
     ],
-    "unicorn/throw-new-error": "error"
+    "unicorn/throw-new-error": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        printWidth: 100,
+        tabWidth: 2,
+        singleQuote: true,
+        trailingComma: "all",
+        proseWrap: "always",
+        overrides: [
+          {
+            files: "*.json",
+            options: {
+              printWidth: 999999,
+            },
+          },
+          {
+            files: "*.scss",
+            options: {
+              singleQuote: false,
+            },
+          },
+        ],
+      },
+    ],
   },
 };
