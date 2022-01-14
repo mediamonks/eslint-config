@@ -161,6 +161,8 @@ module.exports = {
     "unicorn/prevent-abbreviations": [
       "error",
       {
+        checkDefaultAndNamespaceImports : false,
+        checkShorthandImports: false,
         replacements: {
           ref: false,
           refs: false,
