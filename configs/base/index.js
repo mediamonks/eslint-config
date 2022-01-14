@@ -115,7 +115,15 @@ module.exports = {
     "import/no-extraneous-dependencies": [
       "error",
       {
-        devDependencies: ["**/*.test.ts", "**/*.spec.ts", "**/*.test.tsx", "**/*.spec.tsx"],
+        devDependencies: [
+          "**/*.stories.ts",
+          "**/*.stories.tsx",
+          "**/*.test.ts",
+          "**/*.spec.ts",
+          "**/*.test.tsx",
+          "**/*.spec.tsx",
+          "**/test-utils/**/*.ts"
+        ],
       },
     ],
     "lines-between-class-members": "off",
