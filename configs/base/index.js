@@ -3,8 +3,8 @@ module.exports = {
     "airbnb-base",
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
     "plugin:import/typescript",
+    "prettier", // required to disable eslint rules that affect prettier formatting
   ],
   plugins: ["import", "unicorn", "babel"],
   parser: "@typescript-eslint/parser",
@@ -123,7 +123,7 @@ module.exports = {
           "**/*.spec.ts",
           "**/*.test.tsx",
           "**/*.spec.tsx",
-          "**/test-utils/**/*.ts"
+          "**/test-utils/**/*.ts",
         ],
       },
     ],
@@ -171,7 +171,7 @@ module.exports = {
     "unicorn/prevent-abbreviations": [
       "error",
       {
-        checkDefaultAndNamespaceImports : false,
+        checkDefaultAndNamespaceImports: false,
         checkShorthandImports: false,
         replacements: {
           ref: false,
