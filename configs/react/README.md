@@ -30,3 +30,7 @@ Now you can add `@mediamonks/eslint-config-react` to your `.eslintrc`. Adding `p
 }
 
 ```
+
+### Formatting & Prettier
+
+This eslint configuration purposely had its formatting rules disabled. We encourage to use [prettier](https://prettier.io/) for formatting using the [`@mediamonks/prettier-config`](https://github.com/mediamonks/prettier-config).
