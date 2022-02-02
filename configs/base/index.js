@@ -137,6 +137,8 @@ module.exports = {
       "error",
       { object: "document", property: "querySelector" },
       { object: "document", property: "querySelectorAll" },
+      { object: "window", property: "outerWidth" },
+      { object: "window", property: "outerHeight" },
     ],
     "no-undef": "off", // TypeScript already handles this
     "no-underscore-dangle": "error",
