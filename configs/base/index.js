@@ -137,7 +137,7 @@ module.exports = {
       "error",
       { object: "document", property: "querySelector" },
       { object: "document", property: "querySelectorAll" },
-      { object: "window", property: "outerWidth" },
+      { object: "window", property: "outerWidth", message: "Did you mean to use `innerWidth` ?" },
       { object: "window", property: "outerHeight" },
     ],
     "no-undef": "off", // TypeScript already handles this
