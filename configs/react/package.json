@@ -3,7 +3,7 @@
   "version": "2.0.0-rc.2",
   "license": "MIT",
   "keywords": [
-    "MediaMonks",
+    "Media.Monks",
     "Coding",
     "Standards",
     "eslint",
@@ -12,7 +12,7 @@
     "react",
     "jsx"
   ],
-  "author": "MediaMonks",
+  "author": "frontend.monks",
   "bugs": {
     "url": "https://github.com/mediamonks/eslint-config/issues"
   },
