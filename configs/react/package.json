@@ -1,6 +1,6 @@
 {
   "name": "@mediamonks/eslint-config-react",
-  "version": "2.0.0-rc.2",
+  "version": "2.0.0",
   "license": "MIT",
   "keywords": [
     "Media.Monks",
