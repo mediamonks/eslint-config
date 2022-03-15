@@ -137,6 +137,8 @@ module.exports = {
       "error",
       { object: "document", property: "querySelector" },
       { object: "document", property: "querySelectorAll" },
+      { object: "window", property: "outerWidth", message: "Did you mean to use `innerWidth` ?" },
+      { object: "window", property: "outerHeight", message: "Did you mean to use `innerHeight` ?" },
     ],
     "no-undef": "off", // TypeScript already handles this
     "no-underscore-dangle": "error",
