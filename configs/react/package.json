@@ -25,7 +25,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@mediamonks/eslint-config-base": "^2.0.0-alpha.0"
+    "@mediamonks/eslint-config-base": "^2.1.0"
   },
   "peerDependencies": {
     "eslint-plugin-react": "^7.27.0",
