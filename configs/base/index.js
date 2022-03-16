@@ -84,6 +84,11 @@ module.exports = {
         format: ["strictCamelCase", "UPPER_CASE"],
       },
       {
+        selector: "variable",
+        modifiers: ["exported"],
+        format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"]
+      },
+      {
         selector: "enumMember",
         format: ["StrictPascalCase"],
       },
