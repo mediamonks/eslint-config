@@ -71,6 +71,11 @@ module.exports = {
         trailingUnderscore: "forbid",
       },
       {
+        selector: "objectLiteralProperty",
+        modifiers: ["requiresQuotes"],
+        format: null
+      },
+      {
         selector: "typeLike",
         format: ["StrictPascalCase"],
       },
