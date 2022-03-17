@@ -71,12 +71,22 @@ module.exports = {
         trailingUnderscore: "forbid",
       },
       {
+        selector: "objectLiteralProperty",
+        modifiers: ["requiresQuotes"],
+        format: null
+      },
+      {
         selector: "typeLike",
         format: ["StrictPascalCase"],
       },
       {
         selector: "variable",
         format: ["strictCamelCase", "UPPER_CASE"],
+      },
+      {
+        selector: "variable",
+        modifiers: ["exported"],
+        format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"]
       },
       {
         selector: "enumMember",
