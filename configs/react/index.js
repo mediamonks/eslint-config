@@ -64,6 +64,7 @@ module.exports = {
           {
             selector: 'variable',
             modifiers: ['exported'],
+            // Exception for components wrapperd in HOC's and for React's Context
             format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
           },
           {
