@@ -1,0 +1,13 @@
+{
+  "name": "@mediamonks/eslint-config-typescript",
+  "version": "1.0.0-alpha.1",
+  "main": "index.js",
+  "dependencies": {
+    "@mediamonks/eslint-config": "*",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0"
+  },
+  "peerDependencies": {
+    "typescript": "^4.9.3"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@mediamonks/eslint-config-typescript-react",
+  "version": "1.0.0-alpha.1",
+  "main": "index.js",
+  "dependencies": {
+    "@mediamonks/eslint-config-react": "*",
+    "@mediamonks/eslint-config-typescript": "*"
+  }
+}

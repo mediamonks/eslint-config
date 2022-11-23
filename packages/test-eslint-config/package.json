@@ -1,0 +1,15 @@
+{
+  "name": "@mediamonks/test-eslint-config",
+  "private": true,
+  "scripts": {
+    "eslint": "eslint ./**/*.js",
+    "eslint:fix": "eslint ./**/*.js --fix"
+  },
+  "dependencies": {
+    "@mediamonks/eslint-config": "*",
+    "eslint": "^8.28.0"
+  },
+  "eslintConfig": {
+    "extends": "@mediamonks/eslint-config"
+  }
+}

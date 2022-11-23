@@ -1,0 +1,15 @@
+{
+  "name": "@mediamonks/eslint-config",
+  "version": "1.0.0-alpha.1",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-unicorn": "^45.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.28.0"
+  }
+}
