@@ -6,7 +6,6 @@
   ],
   "description": "Sharable eslint config based on Media.Monks Frontend Coding Standards",
   "keywords": [
-    "css",
     "Media.Monks",
     "eslint-config",
     "eslint"
@@ -49,7 +48,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,scss,css,md,json}": "prettier --write",
+    "*.{js,jsx,ts,tsx,md,json}": "prettier --write",
     "*.{js,jsx,ts,tsx}": "eslint --fix"
   }
 }
