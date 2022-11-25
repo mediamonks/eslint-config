@@ -1,6 +1,6 @@
 {
   "name": "@mediamonks/eslint-config-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publishConfig": {
     "access": "public"
   },
@@ -23,7 +23,7 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "@mediamonks/eslint-config": "^2.0.0",
+    "@mediamonks/eslint-config": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0"
   },
