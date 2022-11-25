@@ -4,20 +4,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "description": "Sharable eslint config based on Media.Monks Frontend Coding Standards",
-  "keywords": [
-    "Media.Monks",
-    "eslint-config",
-    "eslint"
-  ],
-  "homepage": "https://github.com/mediamonks/eslint-config#readme",
-  "bugs": {
-    "url": "https://github.com/mediamonks/eslint-config/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mediamonks/eslint-config.git"
-  },
   "license": "MIT",
   "author": "frontend.monks",
   "scripts": {
