@@ -22,13 +22,11 @@
     "react"
   ],
   "main": "index.js",
-  "dependencies": {
+  "peerDependencies": {
     "@mediamonks/eslint-config": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-react-hooks": "^4.6.0"
-  },
-  "peerDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0",
     "react": "^18.2.0"
   }
 }
