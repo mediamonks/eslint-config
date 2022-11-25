@@ -235,6 +235,15 @@ module.exports = {
      * Unicorn
      */
     'unicorn/custom-error-definition': 'error',
+    'unicorn/filename-case': [
+      'error',
+      {
+        cases: {
+          camelCase: true,
+          pascalCase: true,
+        },
+      },
+    ],
     'unicorn/no-keyword-prefix': 'error',
     'unicorn/no-unsafe-regex': 'error',
     'unicorn/no-unused-properties': 'error',
