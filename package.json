@@ -2,8 +2,53 @@
   "name": "@mediamonks/eslint-config-root",
   "private": true,
   "workspaces": [
-    "configs/base",
-    "configs/react",
-    "configs/vue"
-  ]
+    "packages/*"
+  ],
+  "description": "Sharable eslint config based on Media.Monks Frontend Coding Standards",
+  "keywords": [
+    "Media.Monks",
+    "eslint-config",
+    "eslint"
+  ],
+  "homepage": "https://github.com/mediamonks/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/mediamonks/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mediamonks/eslint-config.git"
+  },
+  "license": "MIT",
+  "author": "frontend.monks",
+  "scripts": {
+    "eslint": "npm run eslint --workspaces --if-present",
+    "eslint:fix": "npm run eslint:fix --workspaces --if-present",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@mediamonks/eslint-config": "*",
+    "@mediamonks/prettier-config": "^1.0.1",
+    "eslint": "^8.28.0",
+    "husky": "^8.0.2",
+    "lerna": "^5.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "prettier": "@mediamonks/prettier-config",
+  "eslintConfig": {
+    "extends": "@mediamonks/eslint-config",
+    "env": {
+      "es2022": true,
+      "browser": true
+    },
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md,json}": "prettier --write"
+  }
 }
