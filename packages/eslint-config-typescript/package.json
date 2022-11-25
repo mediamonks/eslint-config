@@ -1,9 +1,9 @@
 {
   "name": "@mediamonks/eslint-config-typescript",
-  "version": "1.0.0-alpha.1",
+  "version": "0.0.0",
   "main": "index.js",
   "dependencies": {
-    "@mediamonks/eslint-config": "^1.0.0-alpha.1",
+    "@mediamonks/eslint-config": "^1.2.3",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0"
   },

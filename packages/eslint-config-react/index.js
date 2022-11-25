@@ -1,3 +1,4 @@
+/* eslint-disable multiline-comment-style, unicorn/prefer-module, no-undef */
 module.exports = {
   extends: [
     '@mediamonks/eslint-config',
@@ -19,7 +20,7 @@ module.exports = {
       'error',
       {
         // Allow variables that end with `prop` or `props`
-        ignore: [/props?$/i],
+        ignore: [/props?$/iu],
       },
     ],
 

@@ -1,3 +1,4 @@
+/* eslint-disable multiline-comment-style, unicorn/prefer-module, no-undef */
 module.exports = {
   extends: [
     '@mediamonks/eslint-config',
