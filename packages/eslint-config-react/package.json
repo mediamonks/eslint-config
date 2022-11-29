@@ -1,6 +1,6 @@
 {
   "name": "@mediamonks/eslint-config-react",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "publishConfig": {
     "access": "public"
   },
@@ -23,7 +23,7 @@
   ],
   "main": "index.js",
   "peerDependencies": {
-    "@mediamonks/eslint-config": "^2.0.4",
+    "@mediamonks/eslint-config": "^2.0.5",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0"

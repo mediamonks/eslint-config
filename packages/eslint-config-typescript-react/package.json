@@ -1,6 +1,6 @@
 {
   "name": "@mediamonks/eslint-config-typescript-react",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "publishConfig": {
     "access": "public"
   },
@@ -24,7 +24,7 @@
   ],
   "main": "index.js",
   "peerDependencies": {
-    "@mediamonks/eslint-config-react": "^2.1.7",
-    "@mediamonks/eslint-config-typescript": "^1.0.5"
+    "@mediamonks/eslint-config-react": "^2.1.8",
+    "@mediamonks/eslint-config-typescript": "^1.0.6"
   }
 }
