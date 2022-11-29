@@ -1,12 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-vars, max-classes-per-file */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { MyClass, type MyReadonlyInterface, type MyInterface } from 'myModule';
 
-// eslint-disable-next-line no-console
-console.log('test-eslint-config-typescript');
+const myClassInstance = new MyClass();
 
 const myArray1: Array<boolean> = [true, false, true, true, false];
 const myArray2: ReadonlyArray<boolean> = [true, false, true, true, false];
 
-interface Interface {
+interface Interface extends MyInterface {
   myProperty: Readonly<[number, number]>;
 }
 
@@ -22,7 +22,17 @@ abstract class MyAbstractClass {
   }
 }
 
-class MyClass {
+enum HttpCode {
+  Ok = 200,
+  Teapot = 418,
+}
+
+const defaultCode: HttpCode = 200;
+
+class MyLocalClass {
+  public readonly readonlyCode: HttpCode = 418;
+  public code: HttpCode = defaultCode;
+
   public constructor(private readonly message: string) {}
 
   public method(): string {
@@ -41,3 +51,7 @@ function sayCheese(_?: string, message?: string): string | undefined {
 }
 
 sayCheese(undefined, 'Sandwich');
+
+function functionWithParameter(value: MyInterface): string {
+  return value.a + value.b;
+}

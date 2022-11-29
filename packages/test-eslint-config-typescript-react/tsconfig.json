@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["ESNext", "DOM"],
+    "jsx": "react-jsx"
   }
 }

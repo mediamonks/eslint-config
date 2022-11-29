@@ -1,3 +1,4 @@
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = {
   extends: ['@mediamonks/eslint-config-react', '@mediamonks/eslint-config-typescript'],
   rules: {
@@ -14,7 +15,7 @@ module.exports = {
         leadingUnderscore: 'allow',
       },
       {
-        selector: 'typeLike',
+        selector: ['typeLike', 'enumMember'],
         format: ['PascalCase'],
         custom: {
           regex: '^[A-Z]{2}',

@@ -20,9 +20,7 @@
     "eslint",
     "eslint-config"
   ],
-  "files": [
-    "index.js"
-  ],
+  "main": "index.js",
   "peerDependencies": {
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",

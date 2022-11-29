@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "eslint": "eslint ./**/*.ts",
-    "eslint:fix": "eslint ./**/*.ts --fix"
+    "eslint:fix": "eslint ./**/*.ts --fix",
+    "build": "tsc --noEmit"
   },
   "dependencies": {
     "@mediamonks/eslint-config-typescript": "*",

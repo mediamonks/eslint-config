@@ -9,6 +9,7 @@
   "scripts": {
     "eslint": "npm run eslint --workspaces --if-present",
     "eslint:fix": "npm run eslint:fix --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -27,7 +28,7 @@
   "eslintConfig": {
     "extends": "@mediamonks/eslint-config",
     "env": {
-      "es2022": true,
+      "node": true,
       "browser": true
     },
     "parserOptions": {
