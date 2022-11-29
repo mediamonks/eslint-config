@@ -13,6 +13,7 @@ module.exports = {
     'no-duplicate-imports': 'off',
     'no-magic-numbers': 'off',
     'no-shadow': 'off',
+    'no-use-before-define': 'off',
 
     /**
      * @typescript-eslint
