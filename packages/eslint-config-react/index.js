@@ -28,7 +28,6 @@ module.exports = {
      * React
      */
     // 'react/boolean-prop-naming': 'error',
-    'react/button-has-type': 'error',
     // "react/default-props-match-prop-types": "error",
     'react/destructuring-assignment': 'error',
     // 'react/forbid-component-props': 'error',
@@ -39,43 +38,7 @@ module.exports = {
     'react/function-component-definition': 'error',
     'react/hook-use-state': 'error',
     'react/iframe-missing-sandbox': 'error',
-    'react/jsx-boolean-value': 'error',
-    'react/jsx-child-element-spacing': 'error',
-    // "react/jsx-closing-bracket-location": "error",
-    // "react/jsx-closing-tag-location": "error",
-    'react/jsx-curly-brace-presence': 'error',
-    // "react/jsx-curly-newline": "error",
-    // "react/jsx-curly-spacing": "error",
-    // "react/jsx-equals-spacing": "error",
-    // "react/jsx-filename-extension": "error",
-    // "react/jsx-first-prop-new-line": "error",
-    'react/jsx-fragments': 'error',
-    'react/jsx-handler-names': [
-      'error',
-      {
-        eventHandlerPrefix: 'on',
-        eventHandlerPropPrefix: 'on',
-        checkLocalVariables: true,
-      },
-    ],
-    // "react/jsx-indent": "error",
-    // "react/jsx-indent-props": "error",
-    // "react/jsx-max-depth": "error",
-    // "react/jsx-max-props-per-line": "error",
-    'react/jsx-newline': 'error',
-    'react/jsx-no-bind': 'error',
-    'react/jsx-no-constructed-context-values': 'error',
-    // 'react/jsx-no-leaked-render': 'error',
-    'react/jsx-no-literals': ['error', { ignoreProps: true }],
-    'react/jsx-no-script-url': 'error',
-    'react/jsx-no-useless-fragment': 'error',
-    // 'react/jsx-one-expression-per-line': 'error',
-    'react/jsx-pascal-case': 'error',
-    // "react/jsx-props-no-multi-spaces": "error",
-    // "react/jsx-props-no-spreading": "error",
-    // 'react/jsx-sort-props': 'error',
-    // "react/jsx-tag-spacing": "error",
-    // "react/jsx-wrap-multilines": "error",
+
     'react/no-access-state-in-setstate': 'error',
     'react/no-adjacent-inline-elements': 'error',
     'react/no-array-index-key': 'error',
@@ -109,13 +72,62 @@ module.exports = {
     'react/static-property-placement': 'error',
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
-
-    /**
-     * JSX A11y
-     */
-    'jsx-a11y/control-has-associated-label': 'error',
-    'jsx-a11y/lang': 'error',
-    // 'jsx-a11y/anchor-ambiguous-text': 'error',
-    // 'jsx-a11y/prefer-tag-over-role': 'error',
   },
+
+  overrides: [
+    {
+      files: ['*.jsx', '*.tsx'],
+      rules: {
+        /**
+         * React
+         */
+        'react/button-has-type': 'error',
+        'react/jsx-boolean-value': 'error',
+        'react/jsx-child-element-spacing': 'error',
+        // "react/jsx-closing-bracket-location": "error",
+        // "react/jsx-closing-tag-location": "error",
+        'react/jsx-curly-brace-presence': 'error',
+        // "react/jsx-curly-newline": "error",
+        // "react/jsx-curly-spacing": "error",
+        // "react/jsx-equals-spacing": "error",
+        // "react/jsx-filename-extension": "error",
+        // "react/jsx-first-prop-new-line": "error",
+        'react/jsx-fragments': 'error',
+        'react/jsx-handler-names': [
+          'error',
+          {
+            eventHandlerPrefix: 'on',
+            eventHandlerPropPrefix: 'on',
+            checkLocalVariables: true,
+          },
+        ],
+        // "react/jsx-indent": "error",
+        // "react/jsx-indent-props": "error",
+        // "react/jsx-max-depth": "error",
+        // "react/jsx-max-props-per-line": "error",
+        'react/jsx-newline': 'error',
+        'react/jsx-no-bind': 'error',
+        'react/jsx-no-constructed-context-values': 'error',
+        // 'react/jsx-no-leaked-render': 'error',
+        'react/jsx-no-literals': ['error', { ignoreProps: true }],
+        'react/jsx-no-script-url': 'error',
+        'react/jsx-no-useless-fragment': 'error',
+        // 'react/jsx-one-expression-per-line': 'error',
+        'react/jsx-pascal-case': 'error',
+        // "react/jsx-props-no-multi-spaces": "error",
+        // "react/jsx-props-no-spreading": "error",
+        // 'react/jsx-sort-props': 'error',
+        // "react/jsx-tag-spacing": "error",
+        // "react/jsx-wrap-multilines": "error",
+
+        /**
+         * JSX A11y
+         */
+        'jsx-a11y/control-has-associated-label': 'error',
+        'jsx-a11y/lang': 'error',
+        // 'jsx-a11y/anchor-ambiguous-text': 'error',
+        // 'jsx-a11y/prefer-tag-over-role': 'error',
+      },
+    },
+  ],
 };
