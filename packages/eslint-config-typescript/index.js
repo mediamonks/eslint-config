@@ -37,17 +37,19 @@ module.exports = {
       'error',
       {
         selector: 'default',
-        format: ['camelCase'],
+        format: ['strictCamelCase'],
         leadingUnderscore: 'allow',
+        trailingUnderscore: 'forbid',
       },
       {
         selector: ['typeLike', 'enumMember'],
-        format: ['PascalCase'],
+        format: ['StrictPascalCase'],
         custom: {
           regex: '^[A-Z]{2}',
           match: false,
         },
         leadingUnderscore: 'forbid',
+        trailingUnderscore: 'forbid',
       },
     ],
     '@typescript-eslint/no-confusing-void-expression': 'error',

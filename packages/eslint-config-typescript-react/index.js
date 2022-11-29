@@ -6,22 +6,25 @@ module.exports = {
       'error',
       {
         selector: 'default',
-        format: ['camelCase'],
+        format: ['strictCamelCase'],
         leadingUnderscore: 'allow',
+        trailingUnderscore: 'forbid',
       },
       {
         selector: ['variable', 'function'],
-        format: ['PascalCase', 'camelCase'],
+        format: ['StrictPascalCase', 'strictCamelCase'],
         leadingUnderscore: 'allow',
+        trailingUnderscore: 'forbid',
       },
       {
         selector: ['typeLike', 'enumMember'],
-        format: ['PascalCase'],
+        format: ['StrictPascalCase'],
         custom: {
           regex: '^[A-Z]{2}',
           match: false,
         },
         leadingUnderscore: 'forbid',
+        trailingUnderscore: 'forbid',
       },
     ],
   },
