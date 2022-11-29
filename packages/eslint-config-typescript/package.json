@@ -23,7 +23,7 @@
   ],
   "main": "index.js",
   "peerDependencies": {
-    "@mediamonks/eslint-config": "^2.0.3",
+    "@mediamonks/eslint-config": "^2.0.4",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "typescript": "^4.9.3"
