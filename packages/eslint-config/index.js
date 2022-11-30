@@ -96,13 +96,7 @@ module.exports = {
     // 'no-lone-blocks': 'error',
     'no-lonely-if': 'error',
     'no-loop-func': 'error',
-    'no-magic-numbers': [
-      'error',
-      {
-        ignore: [-1, 0, 1],
-        ignoreArrayIndexes: true,
-      },
-    ],
+    'no-magic-numbers': 'off',
     'no-mixed-operators': 'error',
     'no-multi-assign': 'error',
     'no-multi-str': 'error',

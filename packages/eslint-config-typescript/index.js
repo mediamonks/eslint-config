@@ -11,7 +11,6 @@ module.exports = {
   rules: {
     'consistent-return': 'off',
     'no-duplicate-imports': 'off',
-    'no-magic-numbers': 'off',
     'no-shadow': 'off',
     'no-use-before-define': 'off',
     'spaced-comment': 'off',
@@ -55,15 +54,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-confusing-void-expression': 'error',
-    '@typescript-eslint/no-magic-numbers': [
-      'error',
-      {
-        ignore: [-1, 0, 1],
-        ignoreArrayIndexes: true,
-        ignoreEnums: true,
-        ignoreReadonlyClassProperties: true,
-      },
-    ],
+    '@typescript-eslint/no-magic-numbers': 'off',
     '@typescript-eslint/no-redundant-type-constituents': 'error',
     '@typescript-eslint/no-require-imports': 'error',
     '@typescript-eslint/no-shadow': 'error',
