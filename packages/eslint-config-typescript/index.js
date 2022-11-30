@@ -14,6 +14,7 @@ module.exports = {
     'no-magic-numbers': 'off',
     'no-shadow': 'off',
     'no-use-before-define': 'off',
+    'spaced-comment': 'off',
 
     /**
      * @typescript-eslint
