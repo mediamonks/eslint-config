@@ -1,7 +1,6 @@
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
   extends: [
-    '@mediamonks/eslint-config',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/strict',

@@ -22,9 +22,5 @@
     "typescript",
     "react"
   ],
-  "main": "index.js",
-  "peerDependencies": {
-    "@mediamonks/eslint-config-react": "^2.1.8",
-    "@mediamonks/eslint-config-typescript": "^1.0.7"
-  }
+  "main": "index.js"
 }

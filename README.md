@@ -5,7 +5,7 @@ The official Media.Monks eslint configuration, based on the
 
 ## Installation
 
-The configuration can be installed via `npm`.
+The configurations can be installed via `npm`.
 
 ```bash
 npm install --dev @mediamonks/eslint-config
@@ -28,42 +28,29 @@ file:
 
 ```json
 "eslintConfig": {
-   "extends": "@mediamonks/eslint-config"
+   "extends": ["@mediamonks/eslint-config"]
 }
 ```
 
 ```json
 "eslintConfig": {
-   "extends": "@mediamonks/eslint-config-react"
+   "extends": ["@mediamonks/eslint-config", "@mediamonks/eslint-config-react"]
 }
 ```
 
 ```json
 "eslintConfig": {
-   "extends": "@mediamonks/eslint-config-typescript"
+   "extends": ["@mediamonks/eslint-config", "@mediamonks/eslint-config-typescript"]
 }
 ```
 
 ```json
 "eslintConfig": {
-   "extends": "@mediamonks/eslint-config-typescript-react"
+   "extends": [
+      "@mediamonks/eslint-config",
+      "@mediamonks/eslint-config-react",
+      "@mediamonks/eslint-config-typescript",
+      "@mediamonks/eslint-config-typescript-react"
+   ]
 }
-```
-
-Instead of manually editing your `package.json`, you can also utilize the `npm pkg` subcommand:
-
-```bash
-npm pkg set eslintConfig.extends=@mediamonks/eslint-config
-```
-
-```bash
-npm pkg set eslintConfig.extends=@mediamonks/eslint-config-react
-```
-
-```bash
-npm pkg set eslintConfig.extends=@mediamonks/eslint-config-typescript
-```
-
-```bash
-npm pkg set eslintConfig.extends=@mediamonks/eslint-config-typescript-react
 ```

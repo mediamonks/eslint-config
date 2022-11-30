@@ -11,7 +11,10 @@
     "eslint": "^8.28.0"
   },
   "eslintConfig": {
-    "extends": "@mediamonks/eslint-config-typescript",
+    "extends": [
+      "@mediamonks/eslint-config",
+      "@mediamonks/eslint-config-typescript"
+    ],
     "parserOptions": {
       "project": "./tsconfig.json",
       "tsconfigRootDir": "./"

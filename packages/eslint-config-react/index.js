@@ -1,7 +1,6 @@
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
   extends: [
-    '@mediamonks/eslint-config',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',

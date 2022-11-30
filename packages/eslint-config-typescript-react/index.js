@@ -1,6 +1,5 @@
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
-  extends: ['@mediamonks/eslint-config-react', '@mediamonks/eslint-config-typescript'],
   rules: {
     '@typescript-eslint/naming-convention': [
       'error',

@@ -12,6 +12,9 @@
     "react": "^18.2.0"
   },
   "eslintConfig": {
-    "extends": "@mediamonks/eslint-config-react"
+    "extends": [
+      "@mediamonks/eslint-config",
+      "@mediamonks/eslint-config-react"
+    ]
   }
 }

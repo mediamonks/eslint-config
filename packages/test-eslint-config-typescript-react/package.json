@@ -16,7 +16,12 @@
     "@types/react": "^18.0.25"
   },
   "eslintConfig": {
-    "extends": "@mediamonks/eslint-config-typescript-react",
+    "extends": [
+      "@mediamonks/eslint-config",
+      "@mediamonks/eslint-config-react",
+      "@mediamonks/eslint-config-typescript",
+      "@mediamonks/eslint-config-typescript-react"
+    ],
     "parserOptions": {
       "project": "./tsconfig.json"
     }
