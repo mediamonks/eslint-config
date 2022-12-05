@@ -82,7 +82,7 @@ module.exports = {
          */
         'react/button-has-type': 'error',
         'react/jsx-boolean-value': 'error',
-        'react/jsx-child-element-spacing': 'error',
+        // 'react/jsx-child-element-spacing': 'error',
         // "react/jsx-closing-bracket-location": "error",
         // "react/jsx-closing-tag-location": "error",
         'react/jsx-curly-brace-presence': 'error',
@@ -104,7 +104,7 @@ module.exports = {
         // "react/jsx-indent-props": "error",
         // "react/jsx-max-depth": "error",
         // "react/jsx-max-props-per-line": "error",
-        'react/jsx-newline': ['error', { prevent: true }],
+        // 'react/jsx-newline': 'error',
         'react/jsx-no-bind': 'error',
         'react/jsx-no-constructed-context-values': 'error',
         // 'react/jsx-no-leaked-render': 'error',
