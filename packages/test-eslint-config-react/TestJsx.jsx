@@ -18,15 +18,12 @@ export function TestEslintConfig({ heading, paragraph, buttonLabel }) {
   return (
     <div>
       <h1>{heading}</h1>
-
       {myMemo && <p>{paragraph}</p>}
-
       <ul>
         {collection.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
-
       <button onClick={onClick} type="submit">
         {buttonLabel}
       </button>

@@ -10,6 +10,7 @@
     "eslint": "npm run eslint --workspaces --if-present",
     "eslint:fix": "npm run eslint:fix --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
+    "format": "prettier --write \"./**/*.{ts,js,tsx,jsx,json}\"",
     "prepare": "husky install"
   },
   "devDependencies": {

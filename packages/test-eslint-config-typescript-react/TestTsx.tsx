@@ -19,7 +19,6 @@ export function TestEslintConfig({
   return (
     <div>
       <h1>{title}</h1>
-
       <ul>
         {collection.map((item) => (
           <li data-icon={icon} key={item}>
@@ -27,7 +26,6 @@ export function TestEslintConfig({
           </li>
         ))}
       </ul>
-
       {buttonLabel !== undefined && <button type="button">{buttonLabel}</button>}
     </div>
   );

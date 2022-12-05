@@ -104,7 +104,7 @@ module.exports = {
         // "react/jsx-indent-props": "error",
         // "react/jsx-max-depth": "error",
         // "react/jsx-max-props-per-line": "error",
-        'react/jsx-newline': 'error',
+        'react/jsx-newline': ['error', { prevent: true }],
         'react/jsx-no-bind': 'error',
         'react/jsx-no-constructed-context-values': 'error',
         // 'react/jsx-no-leaked-render': 'error',
