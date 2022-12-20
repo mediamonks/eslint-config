@@ -21,10 +21,12 @@
     "eslint-config"
   ],
   "main": "index.js",
-  "peerDependencies": {
-    "eslint": "^8.28.0",
+  "dependencies": {
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-unicorn": "^45.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.28.0"
   }
 }

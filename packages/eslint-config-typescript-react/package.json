@@ -22,5 +22,8 @@
     "typescript",
     "react"
   ],
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.44.0"
+  }
 }
