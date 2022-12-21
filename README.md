@@ -40,7 +40,10 @@ file:
 
 ```json
 "eslintConfig": {
-   "extends": ["@mediamonks/eslint-config", "@mediamonks/eslint-config-typescript"]
+   "extends": ["@mediamonks/eslint-config", "@mediamonks/eslint-config-typescript"],
+   "parserOptions": {
+      "project": "./tsconfig.json"
+   }
 }
 ```
 
@@ -51,6 +54,9 @@ file:
       "@mediamonks/eslint-config-react",
       "@mediamonks/eslint-config-typescript",
       "@mediamonks/eslint-config-typescript-react"
-   ]
+   ],
+   "parserOptions": {
+      "project": "./tsconfig.json"
+   }
 }
 ```

@@ -16,7 +16,10 @@ file:
 
 ```json
 "eslintConfig": {
-   "extends": "@mediamonks/eslint-config-typescript-react"
+   "extends": "@mediamonks/eslint-config-typescript-react",
+   "parserOptions": {
+      "project": "./tsconfig.json"
+   }
 }
 ```
 
