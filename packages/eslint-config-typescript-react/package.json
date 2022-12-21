@@ -1,6 +1,6 @@
 {
   "name": "@mediamonks/eslint-config-typescript-react",
-  "version": "1.0.10",
+  "version": "1.0.11-0",
   "publishConfig": {
     "access": "public"
   },
