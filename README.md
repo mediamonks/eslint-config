@@ -21,7 +21,7 @@ Install the following package(s):
 npm install --save-dev @mediamonks/eslint-config
 ```
 
-Add the following configuration to your package.json
+Add the following configuration to your `package.json`
 
 ```json
 "eslintConfig": {
@@ -46,7 +46,7 @@ npm install --save-dev \
   @mediamonks/eslint-config-react
 ```
 
-Add the following configuration to your package.json
+Add the following configuration to your `package.json`
 
 ```json
 "eslintConfig": {
@@ -78,7 +78,7 @@ npm install --save-dev \
   @mediamonks/eslint-config-typescript
 ```
 
-Add the following configuration to your package.json
+Add the following configuration to your `package.json`
 
 ```json
 "eslintConfig": {
@@ -115,7 +115,7 @@ npm install --save-dev \
   @mediamonks/eslint-config-typescript-react
 ```
 
-Add the following configuration to your package.json
+Add the following configuration to your `package.json`
 
 ```json
 "eslintConfig": {
