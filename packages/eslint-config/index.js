@@ -97,7 +97,19 @@ module.exports = {
     'no-lonely-if': 'error',
     'no-loop-func': 'error',
     'no-magic-numbers': 'off',
-    'no-mixed-operators': 'error',
+    'no-mixed-operators': [
+      'error',
+      {
+        groups: [
+          // ["+", "-", "*", "/", "%", "**"], This is disabled because of prettier
+          ['&', '|', '^', '~', '<<', '>>', '>>>'],
+          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+          ['&&', '||'],
+          ['in', 'instanceof'],
+        ],
+        allowSamePrecedence: true,
+      },
+    ],
     'no-multi-assign': 'error',
     'no-multi-str': 'error',
     'no-negated-condition': 'error',
