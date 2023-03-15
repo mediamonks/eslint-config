@@ -1,56 +1,69 @@
-# NOTE: taken from https://github.com/MylesBorins/node-osc/blob/main/.github/workflows/bump-version.yml
-
 name: Bump version & Publish
 
 on:
   workflow_dispatch:
     inputs:
+      config:
+        description: 'The config for which to create a new version'
+        required: true
+        type: choice
+        options:
+          - eslint-config
+          - eslint-config-typescript
+          - eslint-config-react
+          - eslint-config-typescript-react
       version:
         description: 'Semver type of new version (major / minor / patch / prerelease)'
         required: true
-      prereleaseid:
-        description: 'Prerelease id (rc)'
-        default: ''
-      config:
-        description: 'The config for which to create a new version (react / vue / base)'
-        required: true
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+          - prerelease
+      prereleaseId:
+        description: 'Prerelease id (when chosen "prerelease")'
+        required: false
+        type: choice
+        options:
+          - select-option-if-prerelease
+          - alpha
+          - beta
+          - rc
 
 jobs:
   bump-version:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out source
-      uses: actions/checkout@v2
+      - name: Check out source
+        uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
-        cache: 'npm'
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
 
-    - name: Install npm packages
-      run: npm ci
+      - name: Install npm packages
+        run: npm ci
 
-    - name: Setup Git
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+      - name: Setup Git
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      - name: bump version
+        run: |
+          npm version ${{ github.event.inputs.version }} -w packages/${{ github.event.inputs.config }} --no-git-tag-version --preid ${{ github.event.inputs.prereleaseid }}
+          git add .
+          git commit -m "${{ github.event.inputs.config }} v$(npm pkg get version --prefix packages/${{ github.event.inputs.config }} | tr -d '"')" --no-verify
+          git tag @mediamonks/${{ github.event.inputs.config }}@$(npm pkg get version --prefix packages/${{ github.event.inputs.config }} | tr -d '"') -m "${{ github.event.inputs.config }} v$(npm pkg get version --prefix packages/${{ github.event.inputs.config }} | tr -d '"')"
+      - name: publish
+        run: |
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm publish -w packages/${{ github.event.inputs.config }}
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      ## am I crazy or is this 'run' crazy?
-    - name: bump version
-      run: |
-        npm version ${{ github.event.inputs.version }} -w configs/${{ github.event.inputs.config }} --no-git-tag-version --preid ${{ github.event.inputs.prereleaseid }}
-        git add .
-        git commit -m "configs-${{ github.event.inputs.config }} v$(npm pkg get version --prefix configs/${{ github.event.inputs.config }} | tr -d '"')"
-        git tag @mediamonks/eslint-config-${{ github.event.inputs.config }}@$(npm pkg get version --prefix configs/${{ github.event.inputs.config }} | tr -d '"') -m "configs-${{ github.event.inputs.config }} v$(npm pkg get version --prefix configs/${{ github.event.inputs.config }} | tr -d '"')"
-
-    - name: publish
-      run: |
-        npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-        npm publish -w configs/${{ github.event.inputs.config }}
-      env:
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-    - name: Push latest version
-      run: git push origin main --follow-tags
+      - name: Push latest version
+        run: git push origin main --follow-tags
