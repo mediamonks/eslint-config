@@ -144,7 +144,7 @@ Add the following configuration to your `package.json`
       ]
     },
     {
-      "files": [".tsx"],
+      "files": ["*.tsx"],
       "parserOptions": {
         "project": "./tsconfig.json"
       },
