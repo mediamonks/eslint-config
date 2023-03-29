@@ -10,7 +10,7 @@
     "@mediamonks/eslint-config-typescript-react": "*",
     "eslint": "^8.28.0",
     "react": "^18.2.0",
-    "typescript": "^4.9.3"
+    "typescript": "^5.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.25"
