@@ -136,7 +136,13 @@ module.exports = {
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
     // 'no-undefined': 'error',
-    // 'no-underscore-dangle': 'error',
+    'no-underscore-dangle': [
+      'error',
+      {
+        enforceInMethodNames: true,
+        enforceInClassFields: true,
+      },
+    ],
     'no-unneeded-ternary': 'error',
     'no-unused-expressions': 'error',
     'no-useless-call': 'error',

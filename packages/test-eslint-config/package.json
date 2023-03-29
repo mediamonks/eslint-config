@@ -10,6 +10,9 @@
     "eslint": "^8.28.0"
   },
   "eslintConfig": {
-    "extends": "@mediamonks/eslint-config"
+    "extends": "@mediamonks/eslint-config",
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    }
   }
 }
