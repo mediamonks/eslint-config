@@ -5,6 +5,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
+    'plugin:@mediamonks/react/recommended',
   ],
   settings: {
     react: {

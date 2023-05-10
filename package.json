@@ -28,6 +28,7 @@
   "prettier": "@mediamonks/prettier-config",
   "eslintConfig": {
     "extends": "@mediamonks/eslint-config",
+    "root": true,
     "env": {
       "node": true,
       "browser": true
