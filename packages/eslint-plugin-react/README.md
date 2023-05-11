@@ -10,20 +10,13 @@ npm install --save-dev eslint @mediamonks/eslint-plugin-react
 
 ## Usage
 
-Add `@mediamonks/eslint-plugin-react` to the plugins section of your ESLint configuration:
+Configure the rules you want to use under the rules section.
 
 ```json
 {
-  "plugins": ["@mediamonks/eslint-plugin-react"]
-}
-```
-
-Then configure the rules you want to use under the rules section.
-
-```json
-{
+  "plugins": ["plugin:@mediamonks/react"],
   "rules": {
-    "@mediamonks/eslint-plugin-react/rule-name": 2
+    "@mediamonks/react/rule-name": 2
   }
 }
 ```
@@ -32,7 +25,7 @@ Or use the recommended config
 
 ```json
 {
-  "extends": ["@mediamonks/eslint-plugin-react/recommended"]
+  "extends": ["plugin:@mediamonks/react/recommended"]
 }
 ```
 
