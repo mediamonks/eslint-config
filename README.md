@@ -3,6 +3,14 @@
 The official Media.Monks eslint configuration, based on the
 [Frontend Coding Standards](https://github.com/mediamonks/frontend-coding-standards).
 
+| Package                                      | Version                                                                                                                                      | Downloads                                                                     |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `@mediamonks/eslint-config`                  | [![](https://img.shields.io/npm/v/@mediamonks/eslint-config)](https://npmjs.com/@mediamonks/eslint-config)                                   | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-config)                  |
+| `@mediamonks/eslint-config-react`            | [![](https://img.shields.io/npm/v/@mediamonks/eslint-config-react)](https://npmjs.com/@mediamonks/eslint-config-react)                       | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-config-react)            |
+| `@mediamonks/eslint-config-typescript`       | [![](https://img.shields.io/npm/v/@mediamonks/eslint-config-typescript)](https://npmjs.com/@mediamonks/eslint-config-typescript)             | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-config-typescript)       |
+| `@mediamonks/eslint-config-typescript-react` | [![](https://img.shields.io/npm/v/@mediamonks/eslint-config-typescript-react)](https://npmjs.com/@mediamonks/eslint-config-typescript-react) | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-config-typescript-react) |
+| `@mediamonks/eslint-plugin-react`            | [![](https://img.shields.io/npm/v/@mediamonks/eslint-plugin-react)](https://npmjs.com/@mediamonks/eslint-plugin-react)                       | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-plugin-react)            |
+
 ## Installation
 
 Installation and configuration in a project is super easy, follow the instructions for one of the
