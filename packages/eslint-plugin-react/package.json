@@ -12,7 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mediamonks/eslint-config.git"
+    "url": "https://github.com/mediamonks/eslint-config.git",
+    "directory": "packages/eslint-plugin-react"
   },
   "description": "Sharable eslint config based on Media.Monks Frontend Coding Standards",
   "keywords": [

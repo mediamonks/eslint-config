@@ -38,8 +38,8 @@ Or use the recommended config
 💡 Manually fixable by
 [editor suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions).
 
-| Name                                                                                         | Description                                                 | 💼  | 💡  |
-| :------------------------------------------------------------------------------------------- | :---------------------------------------------------------- | :-- | :-- |
-| [throttle-use-resize-observer-callback](docs/rules/throttle-use-resize-observer-callback.md) | Callback function in useResizeObserver should be throttled. | ✅  | 💡  |
+| Name                                                           | Description                           | 💼  | 💡  |
+| :------------------------------------------------------------- | :------------------------------------ | :-- | :-- |
+| [throttle-hook-callback](docs/rules/throttle-hook-callback.md) | Callback in hook should be throttled. | ✅  | 💡  |
 
 <!-- end auto-generated rules list -->

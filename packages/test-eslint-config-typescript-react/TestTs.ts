@@ -48,7 +48,7 @@ function _MyComponent(): null {
 
   useResizeObserver(
     useRef(document.createElement('div')),
-    // eslint-disable-next-line @mediamonks/react/throttle-use-resize-observer-callback
+    // eslint-disable-next-line @mediamonks/react/throttle-hook-callback
     noop,
   );
 

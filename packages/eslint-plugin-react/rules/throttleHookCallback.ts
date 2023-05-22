@@ -1,11 +1,16 @@
 import { type Rule } from 'eslint';
+import { getRuleDocumentationPath } from '../lib/getRuleDocumentationPath';
+
+export const name = 'throttle-hook-callback';
 
 const messages = {
-  missingThrottleFunction: 'Callback function in useResizeObserver should be throttled.',
+  missingThrottleFunction: 'Callback in hook should be throttled.',
   wrapWithUseRafCallback: 'Wrap callback with useRafCallback',
   wrapWithUseDebounceCallback: 'Wrap callback with useDebounceCallback',
   wrapWithUseThrottleCallback: 'Wrap callback with useThrottleCallback',
 };
+
+const defaultHookNames = ['useResizeObserver', 'useMutationObserver'];
 
 const defaultThrottleFunctionNames = [
   'useRafCallback',
@@ -20,9 +25,9 @@ export default {
   meta: {
     messages,
     docs: {
-      description: 'Callback function in useResizeObserver should be throttled.',
+      description: 'Callback in hook should be throttled.',
       recommended: true,
-      url: 'https://example.com/',
+      url: getRuleDocumentationPath(name),
     },
     schema: [
       {
@@ -45,7 +50,12 @@ export default {
     return {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       CallExpression(node): void {
-        if ('name' in node.callee && node.callee.name !== 'useResizeObserver') {
+        const {
+          throttleFunctionNames = defaultThrottleFunctionNames,
+          hookNames = defaultHookNames,
+        } = context.options.at(0) ?? {};
+
+        if ('name' in node.callee && !hookNames.includes(node.callee.name)) {
           return;
         }
 
@@ -55,17 +65,13 @@ export default {
           return;
         }
 
-        // Check if CallExpression is one of the throttle functions
-        if (callbackNode.type === 'CallExpression') {
-          const { throttleFunctionNames = defaultThrottleFunctionNames } =
-            context.options.at(0) ?? {};
-
-          if (
-            'name' in callbackNode.callee &&
-            throttleFunctionNames.includes(callbackNode.callee.name)
-          ) {
-            return;
-          }
+        if (
+          callbackNode.type === 'CallExpression' &&
+          'name' in callbackNode.callee &&
+          // Check if CallExpression is one of the throttle functions
+          throttleFunctionNames.includes(callbackNode.callee.name)
+        ) {
+          return;
         }
 
         context.report({

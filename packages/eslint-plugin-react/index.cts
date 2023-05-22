@@ -1,11 +1,9 @@
 import { type ESLint } from 'eslint';
-import useThrottleFunction from './rules/throttleUseResizeObserverCallback';
+import * as throttleCallback from './rules/throttleHookCallback';
 
 export = {
   rules: {
-    /* eslint-disable @typescript-eslint/naming-convention */
-    'throttle-use-resize-observer-callback': useThrottleFunction,
-    /* eslint-enable */
+    [throttleCallback.name]: throttleCallback.default,
   },
   configs: {
     recommended: {
@@ -15,9 +13,7 @@ export = {
       },
       plugins: ['@mediamonks/react'],
       rules: {
-        /* eslint-disable @typescript-eslint/naming-convention */
-        '@mediamonks/react/throttle-use-resize-observer-callback': 'error',
-        /* eslint-enable */
+        [`@mediamonks/react/${throttleCallback.name}`]: 'error',
       },
     },
   },

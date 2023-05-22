@@ -1,4 +1,4 @@
-# Callback function in useResizeObserver should be throttled (`@mediamonks/react/throttle-use-resize-observer-callback`)
+# Callback in hook should be throttled (`@mediamonks/react/throttle-hook-callback`)
 
 💼 This rule is enabled in the ✅ `recommended` config.
 
@@ -9,8 +9,8 @@
 
 ## Rule details
 
-This rule enforces that the callback function in useResizeObserver should be wrapped with a
-throttling function. By default, the rule supports the following throttle function names:
+This rule enforces that the callback in a hook should be wrapped with a throttle function. By
+default, the rule allows the following throttle functions:
 
 - `useRafCallback`
 - `useDebounceCallback`
@@ -43,6 +43,8 @@ useResizeObserver(
 
 This rule has an optional object configuration:
 
+- `hookNames`: An array of strings specifying custom hook names. Default hook names will be used if
+  this option is not provided.
 - `throttleFunctionNames`: An array of strings specifying custom throttle function names. Default
   throttle function names will be used if this option is not provided.
 
@@ -56,6 +58,7 @@ This rule takes one optional object argument of type object:
     "@mediamonks/react/use-resize-observer-throttle-callback": [
       "error",
       {
+        "hookNames": ["useCustomHook"],
         "throttleFunctionNames": ["customThrottleFunction"]
       }
     ]
