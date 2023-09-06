@@ -1,6 +1,6 @@
 {
   "name": "@mediamonks/eslint-config",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "publishConfig": {
     "access": "public"
   },
