@@ -20,7 +20,7 @@
     "husky": "^8.0.2",
     "lerna": "^7.1.5",
     "lint-staged": "^14.0.0",
-    "prettier": "^2.7.1"
+    "prettier": "^3.0.3"
   },
   "engines": {
     "node": ">=16"
