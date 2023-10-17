@@ -27,12 +27,11 @@ module.exports = {
       },
       {
         selector: 'property',
-        format: ['strictCamelCase'],
-        leadingUnderscore: 'allow',
+        format: [],
         filter: {
           regex: '^--',
-          match: false
-        }
+          match: true,
+        },
       },
     ],
   },

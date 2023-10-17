@@ -53,12 +53,11 @@ module.exports = {
       },
       {
         selector: 'property',
-        format: ['strictCamelCase'],
-        leadingUnderscore: 'allow',
+        format: [],
         filter: {
           regex: '^--',
-          match: false
-        }
+          match: true,
+        },
       },
     ],
     '@typescript-eslint/no-confusing-void-expression': 'error',
