@@ -59,7 +59,7 @@ function functionWithParameter(value: MyInterface): string {
 function twoDashProperty(): boolean {
   const myObject = {
     '--my-property': true,
-  }
+  };
 
   return myObject['--my-property'];
 }

@@ -52,7 +52,7 @@ module.exports = {
         trailingUnderscore: 'forbid',
       },
       {
-        selector: 'property',
+        selector: 'objectLiteralProperty',
         format: [],
         filter: {
           regex: '^--',
