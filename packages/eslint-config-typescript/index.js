@@ -51,6 +51,15 @@ module.exports = {
         leadingUnderscore: 'forbid',
         trailingUnderscore: 'forbid',
       },
+      {
+        selector: 'property',
+        format: ['strictCamelCase'],
+        leadingUnderscore: 'allow',
+        filter: {
+          regex: '^--',
+          match: false
+        }
+      },
     ],
     '@typescript-eslint/no-confusing-void-expression': 'error',
     '@typescript-eslint/no-magic-numbers': 'off',

@@ -25,6 +25,15 @@ module.exports = {
         leadingUnderscore: 'forbid',
         trailingUnderscore: 'forbid',
       },
+      {
+        selector: 'property',
+        format: ['strictCamelCase'],
+        leadingUnderscore: 'allow',
+        filter: {
+          regex: '^--',
+          match: false
+        }
+      },
     ],
   },
 };
