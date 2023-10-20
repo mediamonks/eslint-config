@@ -272,6 +272,15 @@ module.exports = {
     'unicorn/prefer-string-replace-all': 'error',
     'unicorn/require-post-message-target-origin': 'error',
     // 'unicorn/string-content': 'error',
+    'unicorn/numeric-separators-style': [
+      'error',
+      {
+        onlyIfContainsSeparator: true,
+        number: {
+          onlyIfContainsSeparator: false,
+        },
+      },
+    ],
 
     /**
      * Import
