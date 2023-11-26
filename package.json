@@ -18,7 +18,7 @@
     "@mediamonks/prettier-config": "^1.0.1",
     "eslint": "^8.28.0",
     "husky": "^8.0.2",
-    "lerna": "^7.1.5",
+    "lerna": "^8.0.0",
     "lint-staged": "^14.0.0",
     "prettier": "^3.0.3"
   },
