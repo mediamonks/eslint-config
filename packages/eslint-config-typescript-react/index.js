@@ -25,6 +25,14 @@ module.exports = {
         leadingUnderscore: 'forbid',
         trailingUnderscore: 'forbid',
       },
+      {
+        selector: 'objectLiteralProperty',
+        format: [],
+        filter: {
+          regex: '^--',
+          match: true,
+        },
+      },
     ],
   },
 };

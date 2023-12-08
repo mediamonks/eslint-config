@@ -55,3 +55,11 @@ sayCheese(undefined, 'Sandwich');
 function functionWithParameter(value: MyInterface): string {
   return value.a + value.b;
 }
+
+function twoDashProperty(): boolean {
+  const myObject = {
+    '--my-property': true,
+  };
+
+  return myObject['--my-property'];
+}

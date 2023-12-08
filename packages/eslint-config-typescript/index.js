@@ -51,6 +51,14 @@ module.exports = {
         leadingUnderscore: 'forbid',
         trailingUnderscore: 'forbid',
       },
+      {
+        selector: 'objectLiteralProperty',
+        format: [],
+        filter: {
+          regex: '^--',
+          match: true,
+        },
+      },
     ],
     '@typescript-eslint/no-confusing-void-expression': 'error',
     '@typescript-eslint/no-magic-numbers': 'off',
