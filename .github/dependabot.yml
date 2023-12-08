@@ -5,8 +5,15 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "sunday"
+      interval: 'weekly'
+      day: 'sunday'
+    groups:
+      minor_patch:
+        patterns:
+          - '*'
+        update-types:
+          - 'minor'
+          - 'patch'
