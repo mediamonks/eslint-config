@@ -13,6 +13,3 @@ node_modules/
 
 # WebStorms .idea folder
 .idea
-
-# VSCode .vscode folder
-.vscode
