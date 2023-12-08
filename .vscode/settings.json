@@ -1,0 +1,12 @@
+{
+  "eslint.workingDirectories": [
+    "packages/eslint-config",
+    "packages/eslint-config-react",
+    "packages/eslint-config-typescript",
+    "packages/eslint-config-typescript-react",
+    "packages/test-eslint-config",
+    "packages/test-eslint-config-react",
+    "packages/test-eslint-config-typescript",
+    "packages/test-eslint-config-typescript-react"
+  ]
+}

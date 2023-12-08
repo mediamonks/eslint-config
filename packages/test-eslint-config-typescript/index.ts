@@ -15,6 +15,7 @@ interface Type {
 }
 
 abstract class MyAbstractClass {
+  // eslint-disable-next-line no-empty-function
   protected constructor(protected readonly message: string) {}
 
   public method(): string {
@@ -33,6 +34,7 @@ class MyLocalClass {
   public readonly readonlyCode: HttpCode = 418;
   public code: HttpCode = defaultCode;
 
+  // eslint-disable-next-line no-empty-function
   public constructor(private readonly message: string) {}
 
   public method(): string {
