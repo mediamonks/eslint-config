@@ -10,8 +10,8 @@
     "eslint": "npm run eslint --workspaces --if-present",
     "eslint:fix": "npm run eslint:fix --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
-    "format": "prettier --write \"./**/*.{ts,js,tsx,jsx,json}\"",
-    "prepare": "husky install"
+    "format": "prettier . --write --loglevel=warn",
+    "postinstall": "husky install"
   },
   "devDependencies": {
     "@mediamonks/eslint-config": "*",
@@ -28,6 +28,7 @@
   "prettier": "@mediamonks/prettier-config",
   "eslintConfig": {
     "extends": "@mediamonks/eslint-config",
+    "root": true,
     "env": {
       "node": true,
       "browser": true
@@ -35,8 +36,5 @@
     "parserOptions": {
       "ecmaVersion": "latest"
     }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,json}": "prettier --write"
   }
 }
