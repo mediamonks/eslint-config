@@ -11,19 +11,19 @@
     "eslint:fix": "npm run eslint:fix --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
     "format": "prettier --write \"./**/*.{ts,js,tsx,jsx,json}\"",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@mediamonks/eslint-config": "*",
     "@mediamonks/prettier-config": "^1.0.1",
     "eslint": "^8.28.0",
-    "husky": "^8.0.2",
+    "husky": "^9.0.10",
     "lerna": "^8.0.0",
     "lint-staged": "^15.2.0",
     "prettier": "^3.0.3"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "prettier": "@mediamonks/prettier-config",
   "eslintConfig": {
