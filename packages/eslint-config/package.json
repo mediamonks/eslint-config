@@ -24,7 +24,7 @@
   "dependencies": {
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-unicorn": "^49.0.0"
+    "eslint-plugin-unicorn": "^51.0.1"
   },
   "peerDependencies": {
     "eslint": "^8.28.0"
