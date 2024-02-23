@@ -10,6 +10,10 @@ module.exports = {
         trailingUnderscore: 'forbid',
       },
       {
+        selector: 'import',
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
         selector: ['variable', 'function'],
         format: ['StrictPascalCase', 'strictCamelCase'],
         leadingUnderscore: 'allow',
