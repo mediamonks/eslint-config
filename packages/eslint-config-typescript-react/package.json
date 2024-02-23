@@ -24,6 +24,6 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.13.2"
+    "@typescript-eslint/eslint-plugin": "^7.0.1"
   }
 }
