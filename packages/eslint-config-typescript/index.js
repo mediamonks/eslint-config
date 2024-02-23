@@ -42,6 +42,10 @@ module.exports = {
         trailingUnderscore: 'forbid',
       },
       {
+        selector: 'import',
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
         selector: ['typeLike', 'enumMember'],
         format: ['StrictPascalCase'],
         custom: {
