@@ -1,6 +1,7 @@
 {
   "name": "@mediamonks/eslint-config",
   "version": "2.5.0",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -20,10 +21,13 @@
     "eslint",
     "eslint-config"
   ],
-  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
   "dependencies": {
-    "eslint-config-prettier": "^9.0.0",
+    "@eslint/js": "^8.57.0",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^48.2.1",
     "eslint-plugin-unicorn": "^51.0.1"
   },
   "peerDependencies": {
