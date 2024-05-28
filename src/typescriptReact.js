@@ -1,5 +1,8 @@
-// eslint-disable-next-line unicorn/prefer-module
-module.exports = {
+/**
+ * @type {import('eslint').Linter.Config}
+ */
+export const recommended = {
+  name: '@mediamonks/eslint-config/typescript-react/recommended',
   rules: {
     '@typescript-eslint/naming-convention': [
       'error',
