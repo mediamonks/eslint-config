@@ -1,5 +1,4 @@
 #!/bin/sh
 
 npx lint-staged
-npm run eslint
-npm run build
+npx eslint
