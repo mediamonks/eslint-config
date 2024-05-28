@@ -1,5 +1,10 @@
-// eslint-disable-next-line unicorn/prefer-module
-module.exports = {
+import eslintConfig, { configs as baseConfigs } from '@mediamonks/eslint-config';
+import eslintConfigReact, { configs as reactConfigs } from '@mediamonks/eslint-config-react';
+import eslintConfigTypescript, {
+  configs as typescriptConfigs,
+} from '@mediamonks/eslint-config-typescript';
+
+const recommended = {
   rules: {
     '@typescript-eslint/naming-convention': [
       'error',
@@ -40,3 +45,23 @@ module.exports = {
     ],
   },
 };
+
+export const configs = {
+  recommended,
+};
+
+/**
+ * @type {import('eslint').Linter.Config}
+ */
+export default [
+  ...eslintConfig,
+  ...eslintConfigReact,
+  ...eslintConfigTypescript,
+  {
+    files: ['**/*.tsx', '**/*.ctsx', '**/*.mtsx'],
+    ...baseConfigs.recommended,
+    ...reactConfigs.recommended,
+    ...typescriptConfigs.recommended,
+    ...recommended,
+  },
+];

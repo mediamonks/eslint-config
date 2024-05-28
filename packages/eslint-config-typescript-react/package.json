@@ -24,6 +24,9 @@
   ],
   "main": "index.js",
   "dependencies": {
+    "@mediamonks/eslint-config": "*",
+    "@mediamonks/eslint-config-react": "*",
+    "@mediamonks/eslint-config-typescript": "*",
     "@typescript-eslint/eslint-plugin": "^7.0.1"
   }
 }

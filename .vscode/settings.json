@@ -8,5 +8,5 @@
     "packages/test-eslint-config-react",
     "packages/test-eslint-config-typescript",
     "packages/test-eslint-config-typescript-react"
-  ]
+  ],
 }

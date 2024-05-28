@@ -6,6 +6,7 @@
   ],
   "license": "MIT",
   "author": "frontend.monks",
+  "type": "module",
   "scripts": {
     "eslint": "npm run eslint --workspaces --if-present",
     "eslint:fix": "npm run eslint:fix --workspaces --if-present",
@@ -16,26 +17,16 @@
   "devDependencies": {
     "@mediamonks/eslint-config": "*",
     "@mediamonks/prettier-config": "^1.0.1",
-    "eslint": "^8.28.0",
+    "eslint": "^9.3.0",
     "husky": "^9.0.10",
     "lerna": "^8.0.0",
     "lint-staged": "^15.2.0",
     "prettier": "^3.0.3"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "prettier": "@mediamonks/prettier-config",
-  "eslintConfig": {
-    "extends": "@mediamonks/eslint-config",
-    "env": {
-      "node": true,
-      "browser": true
-    },
-    "parserOptions": {
-      "ecmaVersion": "latest"
-    }
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,json}": "prettier --write"
   }

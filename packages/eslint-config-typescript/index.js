@@ -1,5 +1,4 @@
-// eslint-disable-next-line unicorn/prefer-module
-module.exports = {
+const recommended = {
   extends: [
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
@@ -30,7 +29,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'error',
     '@typescript-eslint/explicit-member-accessibility': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'error',
-    // '@typescript-eslint/member-delimiter-style': 'error',
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/method-signature-style': ['error', 'method'],
     '@typescript-eslint/naming-convention': [
@@ -69,9 +67,7 @@ module.exports = {
     '@typescript-eslint/no-redundant-type-constituents': 'error',
     '@typescript-eslint/no-require-imports': 'error',
     '@typescript-eslint/no-shadow': 'error',
-    // '@typescript-eslint/no-type-alias': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
-    // '@typescript-eslint/no-useless-empty-export': 'error',
     '@typescript-eslint/parameter-properties': [
       'error',
       {
@@ -80,16 +76,25 @@ module.exports = {
     ],
     '@typescript-eslint/prefer-enum-initializers': 'error',
     '@typescript-eslint/prefer-readonly': 'error',
-    // '@typescript-eslint/prefer-readonly-parameter-types': 'error',
     '@typescript-eslint/prefer-regexp-exec': 'error',
-    // '@typescript-eslint/promise-function-async': 'error',
     '@typescript-eslint/require-array-sort-compare': 'error',
-    // '@typescript-eslint/sort-type-constituents': 'error',
-    // '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
-    // '@typescript-eslint/typedef': 'error',
 
     /** Typescript reports error on unresolved imports itself */
     'import/no-unresolved': 'off',
   },
 };
+
+export const configs = {
+  recommended,
+};
+
+/**
+ * @type {import('eslint').Linter.Config}
+ */
+export default [
+  {
+    files: ['**/*.ts', '**/*.cts', '**/*.mts'],
+    ...recommended,
+  },
+];
