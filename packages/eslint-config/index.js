@@ -12,7 +12,7 @@ module.exports = {
      * Possible Problems
      */
     'array-callback-return': 'error',
-    'no-await-in-loop': 'error',
+    // 'no-await-in-loop': 'error',
     'no-constant-binary-expression': 'error',
     'no-constructor-return': 'error',
     'no-duplicate-imports': 'error',
@@ -30,20 +30,15 @@ module.exports = {
      * Suggestions
      */
     'accessor-pairs': 'error',
-    'arrow-body-style': ['error', 'as-needed'],
+    // 'arrow-body-style': ['error', 'as-needed'],
     // 'block-scoped-var': 'error',
-    camelcase: [
-      'error',
-      {
-        properties: 'always',
-      },
-    ],
+    camelcase: ['error', { properties: 'always' }],
     // 'capitalized-comments': 'error',
-    'class-methods-use-this': 'error',
+    // 'class-methods-use-this': 'error',
     // 'complexity': 'error',
     'consistent-return': 'error',
     // 'consistent-this': 'error',
-    curly: 'error',
+    // curly: 'error',
     'default-case': 'error',
     'default-case-last': 'error',
     'default-param-last': 'error',
@@ -85,10 +80,10 @@ module.exports = {
     'no-extra-bind': 'error',
     // 'no-extra-label': 'error',
     'no-floating-decimal': 'error',
-    'no-implicit-coercion': 'error',
+    // 'no-implicit-coercion': 'error',
     'no-implicit-globals': 'error',
     'no-implied-eval': 'error',
-    'no-inline-comments': 'error',
+    // 'no-inline-comments': 'error',
     'no-invalid-this': 'error',
     'no-iterator': 'error',
     // 'no-label-var': 'error',
@@ -110,10 +105,10 @@ module.exports = {
         allowSamePrecedence: true,
       },
     ],
-    'no-multi-assign': 'error',
+    // 'no-multi-assign': 'error',
     'no-multi-str': 'error',
-    'no-negated-condition': 'error',
-    'no-nested-ternary': 'error',
+    // 'no-negated-condition': 'error',
+    // 'no-nested-ternary': 'error',
     'no-new': 'error',
     'no-new-func': 'error',
     'no-new-object': 'error',
@@ -136,13 +131,7 @@ module.exports = {
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
     // 'no-undefined': 'error',
-    'no-underscore-dangle': [
-      'error',
-      {
-        enforceInMethodNames: true,
-        enforceInClassFields: true,
-      },
-    ],
+    'no-underscore-dangle': ['error', { enforceInMethodNames: true, enforceInClassFields: true }],
     'no-unneeded-ternary': 'error',
     'no-unused-expressions': 'error',
     'no-useless-call': 'error',
@@ -159,9 +148,9 @@ module.exports = {
     'operator-assignment': 'error',
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
-    'prefer-destructuring': 'error',
+    // 'prefer-destructuring': 'error',
     'prefer-exponentiation-operator': 'error',
-    'prefer-named-capture-group': 'error',
+    // 'prefer-named-capture-group': 'error',
     'prefer-numeric-literals': 'error',
     'prefer-object-has-own': 'error',
     'prefer-object-spread': 'error',
@@ -252,34 +241,30 @@ module.exports = {
     /**
      * Unicorn
      */
+    'unicorn/consistent-function-scoping': 'off',
     'unicorn/custom-error-definition': 'error',
-    'unicorn/filename-case': [
-      'error',
-      {
-        cases: {
-          camelCase: true,
-          pascalCase: true,
-        },
-      },
-    ],
+    'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true } }],
+    'unicorn/no-array-for-each': 'off',
+    'unicorn/no-array-reduce': 'off',
     // 'unicorn/no-keyword-prefix': 'error',
+    'unicorn/no-negated-condition': 'off',
     'unicorn/no-null': 'off',
     'unicorn/no-unsafe-regex': 'error',
     'unicorn/no-unused-properties': 'error',
+    'unicorn/prefer-array-find': 'off',
     'unicorn/prefer-at': 'error',
     'unicorn/prefer-event-target': 'error',
     'unicorn/prefer-json-parse-buffer': 'error',
-    'unicorn/prefer-string-replace-all': 'error',
+    'unicorn/prefer-module': 'off',
+    'unicorn/prefer-number-properties': 'off',
+    'unicorn/prefer-string-replace-all': 'off',
+    'unicorn/prefer-string-slice': 'off',
+    'unicorn/prevent-abbreviations': 'off',
     'unicorn/require-post-message-target-origin': 'error',
     // 'unicorn/string-content': 'error',
     'unicorn/numeric-separators-style': [
       'error',
-      {
-        onlyIfContainsSeparator: true,
-        number: {
-          onlyIfContainsSeparator: false,
-        },
-      },
+      { onlyIfContainsSeparator: true, number: { onlyIfContainsSeparator: false } },
     ],
 
     /**
@@ -321,15 +306,7 @@ module.exports = {
     // 'import/no-named-export': 'error',
     // 'import/no-namespace': 'error',
     // 'import/no-unassigned-import': 'error',
-    'import/order': [
-      'error',
-      {
-        alphabetize: {
-          order: 'asc',
-        },
-        'newlines-between': 'never',
-      },
-    ],
+    'import/order': ['error', { alphabetize: { order: 'asc' }, 'newlines-between': 'never' }],
     // 'import/prefer-default-export': 'error',
   },
 };
