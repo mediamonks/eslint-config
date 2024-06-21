@@ -1,10 +1,22 @@
-import eslintConfig from '@mediamonks/eslint-config';
+import eslintConfig, { configs as baseConfigs } from '@mediamonks/eslint-config';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import unicornPlugin from 'eslint-plugin-unicorn';
 
 const recommended = {
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  languageOptions: {
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
+    },
+  },
   plugins: {
     'jsx-a11y': jsxA11yPlugin,
     react: reactPlugin,
@@ -93,18 +105,7 @@ export default [
   ...eslintConfig,
   {
     files: ['**/*.jsx', '**/*.cjsx', '**/*.mjsx'],
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
+    ...baseConfigs.recommended,
     ...recommended,
   },
 ];

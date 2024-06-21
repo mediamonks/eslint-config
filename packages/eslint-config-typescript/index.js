@@ -1,3 +1,5 @@
+import eslintConfig, { configs as baseConfigs } from '@mediamonks/eslint-config';
+
 const recommended = {
   extends: [
     'plugin:import/typescript',
@@ -11,7 +13,6 @@ const recommended = {
     'no-duplicate-imports': 'off',
     'no-shadow': 'off',
     'no-use-before-define': 'off',
-    'spaced-comment': 'off',
 
     /**
      * @typescript-eslint
@@ -93,8 +94,10 @@ export const configs = {
  * @type {import('eslint').Linter.Config}
  */
 export default [
+  ...eslintConfig,
   {
     files: ['**/*.ts', '**/*.cts', '**/*.mts'],
+    ...baseConfigs.recommended,
     ...recommended,
   },
 ];

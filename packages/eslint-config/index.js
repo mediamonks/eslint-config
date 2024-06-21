@@ -2,7 +2,7 @@ import js from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import unicornPlugin from 'eslint-plugin-unicorn';
 
-export const recommended = {
+const recommended = {
   plugins: {
     unicorn: unicornPlugin,
     import: importPlugin,
@@ -65,7 +65,6 @@ export const recommended = {
     'no-eval': 'error',
     'no-extend-native': 'error',
     'no-extra-bind': 'error',
-    'no-floating-decimal': 'error',
     'no-implicit-coercion': 'error',
     'no-implicit-globals': 'error',
     'no-implied-eval': 'error',
@@ -76,32 +75,17 @@ export const recommended = {
     'no-lonely-if': 'error',
     'no-loop-func': 'error',
     'no-magic-numbers': 'off',
-    'no-mixed-operators': [
-      'error',
-      {
-        groups: [
-          // ["+", "-", "*", "/", "%", "**"], This is disabled because of prettier
-          ['&', '|', '^', '~', '<<', '>>', '>>>'],
-          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-          ['&&', '||'],
-          ['in', 'instanceof'],
-        ],
-        allowSamePrecedence: true,
-      },
-    ],
     'no-multi-assign': 'error',
     'no-multi-str': 'error',
     'no-negated-condition': 'error',
     'no-nested-ternary': 'error',
     'no-new': 'error',
     'no-new-func': 'error',
-    'no-new-object': 'error',
     'no-new-wrappers': 'error',
     'no-octal-escape': 'error',
     'no-param-reassign': 'error',
     'no-proto': 'error',
     'no-return-assign': 'error',
-    'no-return-await': 'error',
     'no-script-url': 'error',
     'no-sequences': 'error',
     'no-shadow': 'error',
@@ -125,7 +109,6 @@ export const recommended = {
     'no-void': 'error',
     'object-shorthand': 'error',
     'one-var': ['error', 'never'],
-    'one-var-declaration-per-line': 'error',
     'operator-assignment': 'error',
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
@@ -140,10 +123,8 @@ export const recommended = {
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
-    'quote-props': ['error', 'as-needed'],
     radix: 'error',
     'require-unicode-regexp': 'error',
-    'spaced-comment': 'error',
     strict: ['error', 'never'],
     'symbol-description': 'error',
     yoda: 'error',
@@ -162,7 +143,6 @@ export const recommended = {
       },
     ],
     'unicorn/no-null': 'off',
-    'unicorn/no-unsafe-regex': 'error',
     'unicorn/no-unused-properties': 'error',
     'unicorn/prefer-at': 'error',
     'unicorn/prefer-event-target': 'error',
