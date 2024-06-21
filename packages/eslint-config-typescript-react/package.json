@@ -22,7 +22,10 @@
     "typescript",
     "react"
   ],
-  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
   "dependencies": {
     "@mediamonks/eslint-config": "*",
     "@mediamonks/eslint-config-react": "*",

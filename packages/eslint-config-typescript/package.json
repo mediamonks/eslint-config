@@ -21,8 +21,12 @@
     "eslint-config",
     "typescript"
   ],
-  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
   "dependencies": {
+    "@mediamonks/eslint-config": "^2.5.0",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.2"
   }

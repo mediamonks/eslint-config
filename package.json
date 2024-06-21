@@ -8,14 +8,14 @@
   "author": "frontend.monks",
   "type": "module",
   "scripts": {
-    "eslint": "npm run eslint --workspaces --if-present",
-    "eslint:fix": "npm run eslint:fix --workspaces --if-present",
+    "eslint": "npx eslint .",
+    "eslint:fix": "npx eslint:fix .",
     "build": "npm run build --workspaces --if-present",
     "format": "prettier --write \"./**/*.{ts,js,tsx,jsx,json}\"",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@mediamonks/eslint-config": "*",
+    "@mediamonks/eslint-config": "^2.5.0",
     "@mediamonks/prettier-config": "^1.0.1",
     "eslint": "^9.3.0",
     "husky": "^9.0.10",
