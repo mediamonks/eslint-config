@@ -23,7 +23,7 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
     "@typescript-eslint/parser": "^7.0.2"
   }
 }
