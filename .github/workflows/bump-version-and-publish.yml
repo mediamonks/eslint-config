@@ -7,15 +7,6 @@ concurrency:
 on:
   workflow_dispatch:
     inputs:
-      config:
-        description: 'The config for which to create a new version'
-        required: true
-        type: choice
-        options:
-          - eslint-config
-          - eslint-config-typescript
-          - eslint-config-react
-          - eslint-config-typescript-react
       version:
         description: 'Semver type of new version (major / minor / patch / prerelease)'
         required: true
@@ -58,19 +49,21 @@ jobs:
         run: npm ci
 
       - name: Setup Git
-        run: |
+        run: |-
           git config user.name github-actions
           git config user.email github-actions@github.com
+
       - name: bump version
-        run: |
-          npm version ${{ github.event.inputs.version }} -w packages/${{ github.event.inputs.config }} --no-git-tag-version --preid ${{ github.event.inputs.prereleaseid }}
+        run: |-
+          npm version ${{ github.event.inputs.version }} --no-git-tag-version --preid ${{ github.event.inputs.prereleaseid }}
           git add .
-          git commit -m "${{ github.event.inputs.config }} v$(npm pkg get version --prefix packages/${{ github.event.inputs.config }} | tr -d '"')" --no-verify
-          git tag @mediamonks/${{ github.event.inputs.config }}@$(npm pkg get version --prefix packages/${{ github.event.inputs.config }} | tr -d '"') -m "${{ github.event.inputs.config }} v$(npm pkg get version --prefix packages/${{ github.event.inputs.config }} | tr -d '"')"
+          git commit -m "v$(npm pkg get version | tr -d '"')" --no-verify
+          git tag @mediamonks/eslint-config@$(npm pkg get version | tr -d '"') -m "v$(npm pkg get version | tr -d '"')"
+
       - name: publish
-        run: |
+        run: |-
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-          npm publish -w packages/${{ github.event.inputs.config }} --provenance
+          npm publish --provenance
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
