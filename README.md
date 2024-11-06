@@ -1,168 +1,100 @@
-# Media.Monks - eslint Configuration
+# Monks - eslint Configuration
 
-The official Media.Monks eslint configuration, based on the
-[Frontend Coding Standards](https://github.com/mediamonks/frontend-coding-standards).
+The Monks ESLint Configuration is a set of linting rules and presets designed to enforce the
+[Frontend Coding Standards](https://github.com/mediamonks/frontend-coding-standards) at Monks. This
+configuration helps maintain code quality and consistency across different projects by providing
+tailored presets for various project types, including JavaScript, TypeScript, and React.
 
-| Package                                      | Version                                                                                                                                      | Downloads                                                                     |
-| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `@mediamonks/eslint-config`                  | [![](https://img.shields.io/npm/v/@mediamonks/eslint-config)](https://npmjs.com/@mediamonks/eslint-config)                                   | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-config)                  |
-| `@mediamonks/eslint-config-react`            | [![](https://img.shields.io/npm/v/@mediamonks/eslint-config-react)](https://npmjs.com/@mediamonks/eslint-config-react)                       | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-config-react)            |
-| `@mediamonks/eslint-config-typescript`       | [![](https://img.shields.io/npm/v/@mediamonks/eslint-config-typescript)](https://npmjs.com/@mediamonks/eslint-config-typescript)             | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-config-typescript)       |
-| `@mediamonks/eslint-config-typescript-react` | [![](https://img.shields.io/npm/v/@mediamonks/eslint-config-typescript-react)](https://npmjs.com/@mediamonks/eslint-config-typescript-react) | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-config-typescript-react) |
-| `@mediamonks/eslint-plugin-react`            | [![](https://img.shields.io/npm/v/@mediamonks/eslint-plugin-react)](https://npmjs.com/@mediamonks/eslint-plugin-react)                       | ![](https://img.shields.io/npm/dm/@mediamonks/eslint-plugin-react)            |
+## Quickstart
 
-## Installation
-
-Installation and configuration in a project is super easy, follow the instructions for one of the
-following project types.
-
-- [For JavaScript projects](#for-javascript-projects)
-- [For JavaScript projects using React](#for-javascript-projects-using-react)
-- [For TypeScript projects](#for-typescript-projects)
-- [For TypeScript projects using React](#for-typescript-projects-using-react)
-
-### For JavaScript projects
-
-Install the following package(s):
+1. Install `@mediamonks/eslint-config`
 
 ```sh
 npm install --save-dev @mediamonks/eslint-config
 ```
 
-Add the following configuration to your `package.json`
+2. Create a `eslint.config.js` file in the root of your module
 
-```json
-"eslintConfig": {
-  "overrides": [
-    {
-      "files": ["*.js"],
-      "extends": [
-         "@mediamonks/eslint-config"
-      ]
-    }
-  ]
-}
-```
+3. Configure your project with one of the configuration presets
 
-### For JavaScript projects using React
+## Examples
 
-Install the following package(s):
+The package provides four presets tailored for different project types. These presets ensure that
+your project adheres to the coding standards and best practices. Below are examples of how to
+configure your project using these presets.
 
-```sh
-npm install --save-dev \
-  @mediamonks/eslint-config
-  @mediamonks/eslint-config-react
-```
+### For projects with JavaScript
 
-Add the following configuration to your `package.json`
+```js
+import { configs } from '@mediamonks/eslint-config';
 
-```json
-"eslintConfig": {
-  "overrides": [
-    {
-      "files": ["*.js"],
-      "extends": [
-         "@mediamonks/eslint-config"
-      ]
-    }
-    {
-      "files": ["*.jsx"],
-      "extends": [
-        "@mediamonks/eslint-config",
-        "@mediamonks/eslint-config-react"
-      ]
-    }
-  ]
-}
-```
-
-### For TypeScript projects
-
-Install the following package(s):
-
-```sh
-npm install --save-dev \
-  @mediamonks/eslint-config \
-  @mediamonks/eslint-config-typescript
-```
-
-Add the following configuration to your `package.json`
-
-```json
-"eslintConfig": {
-  "overrides": [
-    {
-      "files": ["*.js"],
-      "extends": [
-         "@mediamonks/eslint-config"
-      ]
+export default [
+  {
+    ignores: ['build/*'],
+  },
+  ...configs.JavaScript,
+  {
+    languageOptions: {
+      // Your project language options...
+      // Please see the eslint/typescript-eslint documentation for more details
     },
-    {
-      "files": ["*.ts"],
-      "parserOptions": {
-        "project": "./tsconfig.json"
-      },
-      "extends": [
-        "@mediamonks/eslint-config",
-        "@mediamonks/eslint-config-typescript"
-      ]
-    }
-  ]
-}
+  },
+];
 ```
 
-### For TypeScript projects using React
+### For projects with JavaScript and React
 
-Install the following package(s):
+```js
+import { configs } from '@mediamonks/eslint-config';
 
-```sh
-npm install --save-dev \
-  @mediamonks/eslint-config \
-  @mediamonks/eslint-config-react \
-  @mediamonks/eslint-config-typescript \
-  @mediamonks/eslint-config-typescript-react
+export default [
+  {
+    ignores: ['build/*'],
+  },
+  ...configs.javascriptReact,
+  {
+    languageOptions: {
+      // Your project language options...
+      // Please see the eslint/typescript-eslint documentation for more details
+    },
+  },
+];
 ```
 
-Add the following configuration to your `package.json`
+### For projects with TypeScript
 
-```json
-"eslintConfig": {
-  "overrides": [
-    {
-      "files": ["*.js"],
-      "extends": [
-         "@mediamonks/eslint-config"
-      ]
+```js
+import { configs } from '@mediamonks/eslint-config';
+
+export default [
+  {
+    ignores: ['build/*'],
+  },
+  ...configs.typescript,
+  {
+    languageOptions: {
+      // Your project language options...
+      // Please see the eslint/typescript-eslint documentation for more details
     },
-    {
-      "files": ["*.jsx"],
-      "extends": [
-        "@mediamonks/eslint-config",
-        "@mediamonks/eslint-config-react"
-      ]
+  },
+];
+```
+
+### For projects with TypeScript and React
+
+```js
+import { configs } from '@mediamonks/eslint-config';
+
+export default [
+  {
+    ignores: ['build/*'],
+  },
+  ...configs.typescriptReact,
+  {
+    languageOptions: {
+      // Your project language options...
+      // Please see the eslint/typescript-eslint documentation for more details
     },
-    {
-      "files": ["*.ts"],
-      "parserOptions": {
-        "project": "./tsconfig.json"
-      },
-      "extends": [
-        "@mediamonks/eslint-config",
-        "@mediamonks/eslint-config-typescript"
-      ]
-    },
-    {
-      "files": ["*.tsx"],
-      "parserOptions": {
-        "project": "./tsconfig.json"
-      },
-      "extends": [
-        "@mediamonks/eslint-config",
-        "@mediamonks/eslint-config-react",
-        "@mediamonks/eslint-config-typescript",
-        "@mediamonks/eslint-config-typescript-react"
-      ]
-    }
-  ]
-}
+  },
+];
 ```

@@ -21,6 +21,14 @@
     "eslint-config"
   ],
   "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "src/**/*",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
