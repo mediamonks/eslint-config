@@ -22,8 +22,8 @@
   ],
   "type": "module",
   "scripts": {
-    "eslint": "npm run eslint --workspaces --if-present",
-    "eslint:fix": "npm run eslint:fix --workspaces --if-present",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix",
     "format": "prettier --write \"./**/*.{ts,js,tsx,jsx,json}\"",
     "prepare": "husky"
   },
