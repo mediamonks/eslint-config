@@ -102,7 +102,7 @@ const typescriptReact = [
   },
   {
     ...typescriptReactRecommended,
-    files: ['**/*.tsx'],
+    files: ['**/*.tsx', '**/*.styles.ts'],
     name: '@mediamonks/eslint-config / typescript react recommended configuration',
   },
 ];
