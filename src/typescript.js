@@ -17,7 +17,13 @@ export const recommended = {
         fixStyle: 'inline-type-imports',
       },
     ],
-    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      {
+        allowExpressions: true,
+        allowIIFEs: true,
+      },
+    ],
     '@typescript-eslint/explicit-member-accessibility': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'error',
     '@typescript-eslint/member-ordering': 'error',
