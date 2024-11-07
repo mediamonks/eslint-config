@@ -2,6 +2,7 @@ import eslint from '@eslint/js';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import eslintPluginReact from 'eslint-plugin-react';
+import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import eslintPluginStorybook from 'eslint-plugin-storybook';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import typescriptEslint from 'typescript-eslint';
@@ -51,6 +52,14 @@ const react = [
     name: '@mediamonks/eslint-config / eslint-plugin-react / recommended configuration',
   },
   {
+    plugins: {
+      'react-hooks': eslintPluginReactHooks,
+    },
+    ...eslintPluginReactHooks.configs.recommended,
+    files: ['**/*.jsx', '**/*.tsx'],
+    name: '@mediamonks/eslint-config / eslint-plugin-react-hooks / recommended configuration',
+  },
+  {
     ...eslintPluginImport.flatConfigs.react,
     files: ['**/*.jsx', '**/*.tsx'],
     name: '@mediamonks/eslint-config / eslint-plugin-import / recommended react configuration',
@@ -60,15 +69,15 @@ const react = [
     name: `@mediamonks/eslint-config / eslint-plugin-storybook / ${config.name}`,
   })),
   {
-    files: ['**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)', '**/*.story.@(ts|tsx|js|jsx|mjs|cjs)'],
     rules: {
       'react/jsx-no-literals': 'off',
     },
+    files: ['**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)', '**/*.story.@(ts|tsx|js|jsx|mjs|cjs)'],
     name: `@mediamonks/eslint-config / react storybook overrides`,
   },
   {
     ...reactRecommended,
-    files: ['**/*.jsx', '**/*.tsx'],
+    files: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx', '**/*.tsx'],
     name: '@mediamonks/eslint-config / react recommended configuration',
   },
 ];
@@ -97,12 +106,12 @@ const typescript = [
 const typescriptReact = [
   {
     ...eslintPluginImport.flatConfigs.react,
-    files: ['**/*.tsx'],
+    files: ['**/*.ts', '**/*.tsx'],
     name: '@mediamonks/eslint-config / eslint-plugin-import / .tsx configuration',
   },
   {
     ...typescriptReactRecommended,
-    files: ['**/*.tsx', '**/*.styles.ts'],
+    files: ['**/*.ts', '**/*.tsx'],
     name: '@mediamonks/eslint-config / typescript react recommended configuration',
   },
 ];
@@ -121,5 +130,5 @@ export const configs = {
   /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigArray} */
   typescript: [...javascript, ...typescript, overrides],
   /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigArray} */
-  typescriptReact: [...javascript, ...react, ...typescript, ...typescriptReact, overrides],
+  typescriptReact: [...javascript, ...typescript, ...typescriptReact, ...react, overrides],
 };
