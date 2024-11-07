@@ -1,6 +1,4 @@
-/**
- * @type {import('eslint').Linter.Config}
- */
+/** @type {import('eslint').Linter.Config} */
 export const recommended = {
   rules: {
     /**
@@ -8,18 +6,43 @@ export const recommended = {
      */
     'unicorn/prevent-abbreviations': [
       'error',
-      // Allow variables that end with `prop` or `props`
-      { ignore: [/props?/iu, /ref/iu] },
+      {
+        // Allow variables that end with `prop` or `props`
+        ignore: [/props?/iu, /ref/iu],
+      },
     ],
 
     /**
      * React plugin
      */
+    'react/button-has-type': 'error',
     'react/destructuring-assignment': 'error',
     'react/forbid-foreign-prop-types': 'error',
     'react/function-component-definition': 'error',
     'react/hook-use-state': 'error',
     'react/iframe-missing-sandbox': 'error',
+    'react/jsx-boolean-value': 'error',
+    'react/jsx-curly-brace-presence': 'error',
+    'react/jsx-fragments': 'error',
+    'react/jsx-handler-names': [
+      'error',
+      {
+        eventHandlerPrefix: 'on',
+        eventHandlerPropPrefix: 'on',
+        checkLocalVariables: true,
+      },
+    ],
+    'react/jsx-no-bind': 'error',
+    'react/jsx-no-constructed-context-values': 'error',
+    'react/jsx-no-literals': [
+      'error',
+      {
+        ignoreProps: true,
+      },
+    ],
+    'react/jsx-no-script-url': 'error',
+    'react/jsx-no-useless-fragment': 'error',
+    'react/jsx-pascal-case': 'error',
     'react/no-access-state-in-setstate': 'error',
     'react/no-adjacent-inline-elements': 'error',
     'react/no-array-index-key': 'error',
@@ -40,28 +63,11 @@ export const recommended = {
     'react/no-will-update-set-state': 'error',
     'react/prefer-es6-class': 'error',
     'react/prefer-stateless-function': 'error',
+    'react/react-in-jsx-scope': 'off',
     'react/state-in-constructor': ['error', 'never'],
     'react/static-property-placement': 'error',
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
-    'react/button-has-type': 'error',
-    'react/jsx-boolean-value': 'error',
-    'react/jsx-curly-brace-presence': 'error',
-    'react/jsx-fragments': 'error',
-    'react/jsx-handler-names': [
-      'error',
-      {
-        eventHandlerPrefix: 'on',
-        eventHandlerPropPrefix: 'on',
-        checkLocalVariables: true,
-      },
-    ],
-    'react/jsx-no-bind': 'error',
-    'react/jsx-no-constructed-context-values': 'error',
-    'react/jsx-no-literals': ['error', { ignoreProps: true }],
-    'react/jsx-no-script-url': 'error',
-    'react/jsx-no-useless-fragment': 'error',
-    'react/jsx-pascal-case': 'error',
 
     /**
      * JSX A11y plugin
