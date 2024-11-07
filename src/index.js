@@ -60,6 +60,13 @@ const react = [
     name: `@mediamonks/eslint-config / eslint-plugin-storybook / ${config.name}`,
   })),
   {
+    files: ['**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)', '**/*.story.@(ts|tsx|js|jsx|mjs|cjs)'],
+    rules: {
+      'react/jsx-no-literals': 'off',
+    },
+    name: `@mediamonks/eslint-config / react storybook overrides`,
+  },
+  {
     ...reactRecommended,
     files: ['**/*.jsx', '**/*.tsx'],
     name: '@mediamonks/eslint-config / react recommended configuration',
