@@ -1,5 +1,10 @@
+import eslintPluginReact from 'eslint-plugin-react';
+
 /** @type {import('eslint').Linter.Config} */
 export const recommended = {
+  plugins: {
+    react: eslintPluginReact,
+  },
   rules: {
     /**
      * Unicorn plugin
