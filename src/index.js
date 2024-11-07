@@ -2,6 +2,7 @@ import eslint from '@eslint/js';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import eslintPluginReact from 'eslint-plugin-react';
+import eslintPluginStorybook from 'eslint-plugin-storybook';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import typescriptEslint from 'typescript-eslint';
 import { recommended as javascriptRecommended } from './javascript.js';
@@ -41,18 +42,26 @@ const react = [
         version: 'detect',
       },
     },
+    files: ['**/*.jsx', '**/*.tsx'],
     name: '@mediamonks/eslint-config / react settings',
   },
   {
     ...eslintPluginReact.configs.flat.recommended,
+    files: ['**/*.jsx', '**/*.tsx'],
     name: '@mediamonks/eslint-config / eslint-plugin-react / recommended configuration',
   },
   {
     ...eslintPluginImport.flatConfigs.react,
+    files: ['**/*.jsx', '**/*.tsx'],
     name: '@mediamonks/eslint-config / eslint-plugin-import / recommended react configuration',
   },
+  ...eslintPluginStorybook.configs['flat/recommended'].map((config) => ({
+    ...config,
+    name: `@mediamonks/eslint-config / eslint-plugin-storybook / ${config.name}`,
+  })),
   {
     ...reactRecommended,
+    files: ['**/*.jsx', '**/*.tsx'],
     name: '@mediamonks/eslint-config / react recommended configuration',
   },
 ];
@@ -60,19 +69,19 @@ const react = [
 /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 const typescript = [
   // Recommended plugin configurations
-  ...typescriptEslint.configs.strictTypeChecked.map((config) => ({
+  ...typescriptEslint.configs.strict.map((config) => ({
     ...config,
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
     name: `@mediamonks/eslint-config / ${config.name}`,
   })),
-
   {
     ...eslintPluginImport.flatConfigs.typescript,
-    files: ['**/*.ts', '**/*.cts', '**/*.mts', '**/*.tsx'],
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
     name: '@mediamonks/eslint-config / eslint-plugin-import / .ts configuration',
   },
   {
     ...typescriptRecommended,
-    files: ['**/*.ts', '**/*.cts', '**/*.mts'],
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
     name: '@mediamonks/eslint-config / typescript recommended configuration',
   },
 ];
@@ -91,13 +100,19 @@ const typescriptReact = [
   },
 ];
 
+const overrides = {
+  rules: {
+    'import/no-unresolved': 'off',
+  },
+};
+
 export const configs = {
   /** @type {import('eslint').Linter.Config} */
-  javascript,
+  javascript: [...javascript, overrides],
   /** @type {import('eslint').Linter.Config} */
-  react: [...javascript, ...react],
+  react: [...javascript, ...react, overrides],
   /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigArray} */
-  typescript: [...javascript, ...typescript],
+  typescript: [...javascript, ...typescript, overrides],
   /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigArray} */
-  typescriptReact: [...javascript, ...react, ...typescript, ...typescriptReact],
+  typescriptReact: [...javascript, ...react, ...typescript, ...typescriptReact, overrides],
 };
