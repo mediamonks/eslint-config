@@ -2,6 +2,7 @@ import eslint from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
+import eslintPluginNode from 'eslint-plugin-n';
 import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import eslintPluginSecurity from 'eslint-plugin-security';
@@ -109,7 +110,10 @@ const typescriptReact = [
 ];
 
 /** @type {import('eslint').Linter.Config} */
-const node = [eslintPluginSecurity.configs.recommended];
+const node = [
+  eslintPluginNode.configs['flat/recommended'],
+  eslintPluginSecurity.configs.recommended,
+];
 
 /** @type {import('eslint').Linter.Config} */
 const base = [
