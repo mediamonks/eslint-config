@@ -4,10 +4,7 @@ import { configs } from './src/index.js';
  * @type {import('eslint').Linter.Config}
  */
 export default [
-  {
-    ignores: ['src/index.js'],
-  },
-  ...configs.typescriptReact,
+  ...configs.javascript,
   {
     name: 'local configuration',
     languageOptions: {
