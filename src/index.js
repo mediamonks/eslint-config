@@ -109,10 +109,22 @@ const typescriptReact = [
 ];
 
 /** @type {import('eslint').Linter.Config} */
+const node = [eslintPluginSecurity.configs.recommended];
+
+/** @type {import('eslint').Linter.Config} */
+const base = [
+  ...javascript,
+
+  // The ESLint Prettier config will disable rules that conflict with the Prettier code style
+  eslintConfigPrettier,
+];
+
+/** @type {import('eslint').Linter.Config} */
 const overrides = [
   {
     plugins: {
       import: eslintPluginImport,
+      security: eslintPluginSecurity,
     },
     rules: {
       'import/no-unresolved': 'off',
@@ -121,23 +133,16 @@ const overrides = [
   },
 ];
 
-/** @type {import('eslint').Linter.Config} */
-const base = [
-  eslintPluginSecurity.configs.recommended,
-
-  ...javascript,
-
-  // The ESLint Prettier config will disable rules that conflict with the Prettier code style
-  eslintConfigPrettier,
-];
-
 export const configs = {
   /** @type {import('eslint').Linter.Config} */
   javascript: [...base, ...overrides],
+
   /** @type {import('eslint').Linter.Config} */
   react: [...base, ...react, ...storybook, ...overrides],
+
   /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigArray} */
   typescript: [...base, ...typescript, ...overrides],
+
   /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigArray} */
   typescriptReact: [
     ...base,
@@ -147,4 +152,10 @@ export const configs = {
     ...storybook,
     ...overrides,
   ],
+
+  /** @type {import('eslint').Linter.Config} */
+  javascriptNode: [...base, ...node, ...overrides],
+
+  /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigArray} */
+  typescriptNode: [...base, ...typescript, ...node, ...overrides],
 };
