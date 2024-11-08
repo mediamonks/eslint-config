@@ -17,11 +17,22 @@ npm install --save-dev @mediamonks/eslint-config
 
 3. Configure your project with one of the configuration presets
 
+### Presets
+
+| Project Type         | Preset Name     | Description                                  |
+| -------------------- | --------------- | -------------------------------------------- |
+| JavaScript           | javascript      | Preset for standard JavaScript projects      |
+| JavaScript and React | react           | Preset for React projects using JavaScript   |
+| TypeScript           | typescript      | Preset for TypeScript projects               |
+| TypeScript and React | typescriptReact | Preset for React projects using TypeScript   |
+| JavaScript (Node.js) | javascriptNode  | Preset for Node.js projects using JavaScript |
+| TypeScript (Node.js) | typescriptNode  | Preset for Node.js projects using TypeScript |
+
 ## Examples
 
-The package provides four presets tailored for different project types. These presets ensure that
-your project adheres to the coding standards and best practices. Below are examples of how to
-configure your project using these presets.
+The package provides presets tailored for different project types. These presets ensure that your
+project adheres to the coding standards and best practices. Below are examples of how to configure
+your project using these presets.
 
 ### For projects with JavaScript
 
@@ -33,25 +44,6 @@ export default [
     ignores: ['build/*'],
   },
   ...configs.JavaScript,
-  {
-    languageOptions: {
-      // Your project language options...
-      // Please see the eslint/typescript-eslint documentation for more details
-    },
-  },
-];
-```
-
-### For projects with JavaScript and React
-
-```js
-import { configs } from '@mediamonks/eslint-config';
-
-export default [
-  {
-    ignores: ['build/*'],
-  },
-  ...configs.javascriptReact,
   {
     languageOptions: {
       // Your project language options...
@@ -73,8 +65,9 @@ export default [
   ...configs.typescript,
   {
     languageOptions: {
-      // Your project language options...
-      // Please see the eslint/typescript-eslint documentation for more details
+      parserOptions: {
+        project: true,
+      },
     },
   },
 ];
