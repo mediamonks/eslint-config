@@ -147,8 +147,8 @@ export const configs = {
   typescriptReact: [
     ...base,
     ...typescript,
-    ...typescriptReact,
     ...react,
+    ...typescriptReact,
     ...storybook,
     ...overrides,
   ],
