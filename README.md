@@ -43,7 +43,7 @@ export default [
   {
     ignores: ['build/*'],
   },
-  ...configs.JavaScript,
+  ...configs.javascript,
   {
     languageOptions: {
       // Your project language options...
