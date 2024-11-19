@@ -47,7 +47,7 @@ export default [
   {
     languageOptions: {
       // Your project language options...
-      // Please see the eslint/typescript-eslint documentation for more details
+      // Please see the eslint documentation for more details
     },
   },
 ];
