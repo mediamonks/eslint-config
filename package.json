@@ -1,42 +1,70 @@
 {
-  "name": "@mediamonks/eslint-config-root",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "name": "@mediamonks/eslint-config",
+  "version": "2.6.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "author": "frontend.monks",
+  "homepage": "https://github.com/mediamonks/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/mediamonks/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mediamonks/eslint-config.git"
+  },
+  "description": "Sharable eslint config based on Media.Monks Frontend Coding Standards",
+  "keywords": [
+    "Media.Monks",
+    "eslint",
+    "eslint-config"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./javascript": "./src/javascript.js",
+    "./typescript": "./src/typescript.js",
+    "./react": "./src/react.js",
+    "./typescriptReact": "./src/typescriptReact.js"
+  },
+  "files": [
+    "src/**/*",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
-    "eslint": "npm run eslint --workspaces --if-present",
-    "eslint:fix": "npm run eslint:fix --workspaces --if-present",
-    "build": "npm run build --workspaces --if-present",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix",
     "format": "prettier --write \"./**/*.{ts,js,tsx,jsx,json}\"",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@mediamonks/eslint-config": "*",
-    "@mediamonks/prettier-config": "^1.0.1",
-    "eslint": "^8.28.0",
-    "husky": "^9.0.10",
+    "@mediamonks/prettier-config": "^1.0.0",
+    "eslint": "^9.0.0",
+    "husky": "^9.0.0",
     "lerna": "^8.0.0",
-    "lint-staged": "^15.2.0",
-    "prettier": "^3.0.3"
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "prettier": "@mediamonks/prettier-config",
-  "eslintConfig": {
-    "extends": "@mediamonks/eslint-config",
-    "env": {
-      "node": true,
-      "browser": true
-    },
-    "parserOptions": {
-      "ecmaVersion": "latest"
-    }
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,json}": "prettier --write"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.14.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-storybook": "^0.11.0",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "typescript-eslint": "^8.13.0"
   }
 }
