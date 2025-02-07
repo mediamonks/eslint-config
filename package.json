@@ -22,7 +22,11 @@
   ],
   "type": "module",
   "exports": {
-    ".": "./src/index.js"
+    ".": "./src/index.js",
+    "./javascript": "./src/javascript.js",
+    "./typescript": "./src/typescript.js",
+    "./react": "./src/react.js",
+    "./typescriptReact": "./src/typescriptReact.js"
   },
   "files": [
     "src/**/*",
