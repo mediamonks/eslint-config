@@ -3,6 +3,11 @@
  */
 export const rules = {
   /**
+   * Conflicting rules
+   */
+  'dot-notation': 'off',
+
+  /**
    * @typescript-eslint
    */
   '@typescript-eslint/array-type': ['error', { default: 'generic' }],
