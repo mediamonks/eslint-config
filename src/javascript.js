@@ -57,7 +57,6 @@ export const rules = {
   'no-implicit-coercion': 'error',
   'no-implicit-globals': 'error',
   'no-implied-eval': 'error',
-  'no-inline-comments': 'error',
   'no-invalid-this': 'error',
   'no-iterator': 'error',
   'no-labels': 'error',
