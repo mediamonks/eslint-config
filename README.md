@@ -40,10 +40,10 @@ your project using these presets.
 import { configs } from '@mediamonks/eslint-config';
 
 export default [
+  ...configs.javascript,
   {
     ignores: ['build/*'],
   },
-  ...configs.javascript,
   {
     languageOptions: {
       // Your project language options...
@@ -57,37 +57,38 @@ export default [
 
 ```js
 import { configs } from '@mediamonks/eslint-config';
+import tseslint from 'typescript-eslint';
 
-export default [
-  {
-    ignores: ['build/*'],
-  },
+export default tseslint.config(
   ...configs.typescript,
   {
-    languageOptions: {
-      parserOptions: {
-        project: true,
-      },
-    },
-  },
-];
-```
-
-### For projects with TypeScript and React
-
-```js
-import { configs } from '@mediamonks/eslint-config';
-
-export default [
-  {
     ignores: ['build/*'],
   },
-  ...configs.typescriptReact,
   {
     languageOptions: {
       // Your project language options...
       // Please see the eslint/typescript-eslint documentation for more details
     },
   },
-];
+);
+```
+
+### For projects with TypeScript and React
+
+```js
+import { configs } from '@mediamonks/eslint-config';
+import tseslint from 'typescript-eslint';
+
+export default tseslint.config(
+  ...configs.typescriptReact,
+  {
+    ignores: ['build/*'],
+  },
+  {
+    languageOptions: {
+      // Your project language options...
+      // Please see the eslint/typescript-eslint documentation for more details
+    },
+  },
+);
 ```
