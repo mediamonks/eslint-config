@@ -77,8 +77,12 @@ const storybook = [
 
 /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 const typescript = [
-  ...typescriptEslint.configs.strict,
   {
+    files: ['**/*.@(ts|mts|cts)'],
+    ...typescriptEslint.configs.strict,
+  },
+  {
+    files: ['**/*.@(ts|mts|cts)'],
     plugins: {
       import: eslintPluginImport,
     },
@@ -93,6 +97,7 @@ const typescript = [
 /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 const typescriptReact = [
   {
+    files: ['**/*.@(ts|tsx|mts|cts)'],
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
