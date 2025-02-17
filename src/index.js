@@ -78,10 +78,7 @@ const storybook = [
 
 /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 const typescript = [
-  {
-    files: ['**/*.@(ts|mts|cts)'],
-    ...typescriptEslint.configs.strict,
-  },
+  ...typescriptEslint.configs.strict,
   {
     files: ['**/*.@(ts|mts|cts)'],
     plugins: {
